@@ -1,0 +1,23 @@
+# Disc images and large game archives
+*.iso
+*.ISO
+*.bin
+*.BIN
+*.cue
+*.CUE
+*.afs
+*.AFS
+
+# Extracted, dumped, and built artifacts
+extracted/
+sprites_dump/
+build/
+textures/*/dumps/
+textures/*/replacements/
+
+# Python virtual environment and bytecode
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd

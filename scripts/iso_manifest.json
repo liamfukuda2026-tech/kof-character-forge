@@ -1,0 +1,5571 @@
+{
+  "image_path": "G:\\KOF\\King of Fighters 2002, The (Europe).bin",
+  "image_size_bytes": 446463696,
+  "sector_format": "bin2352_mode2",
+  "physical_sector_size": 2352,
+  "logical_sector_size": 2048,
+  "filesystem_walked": "iso9660",
+  "filesystems_detected": {
+    "iso9660": true,
+    "joliet": false,
+    "rock_ridge": false,
+    "udf": false
+  },
+  "system_cnf": {
+    "found": true,
+    "raw": "BOOT2 = cdrom0:\\SLES_533.81;1\r\nVER = 1.03\r\nVMODE = PAL\r\n",
+    "entries": {
+      "BOOT2": "cdrom0:\\SLES_533.81;1",
+      "VER": "1.03",
+      "VMODE": "PAL"
+    },
+    "boot2_raw": "cdrom0:\\SLES_533.81;1",
+    "ps2_executable": "SLES_533.81"
+  },
+  "ps2_executable": "SLES_533.81",
+  "total_files": 392,
+  "total_data_bytes": 387997166,
+  "containers_count": 300,
+  "containers": [
+    {
+      "iso_path": "/MODULES/IOPRP300.IMG;1",
+      "clean_path": "/MODULES/IOPRP300.IMG",
+      "size_bytes": 275345,
+      "lba_start": 4950,
+      "lba_sectors": 135,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/RNK_BG.DAT;1",
+      "clean_path": "/DATA/RNK_BG.DAT",
+      "size_bytes": 1409024,
+      "lba_start": 5176,
+      "lba_sectors": 688,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/RNK_BGU.DAT;1",
+      "clean_path": "/DATA/RNK_BGU.DAT",
+      "size_bytes": 1409024,
+      "lba_start": 5864,
+      "lba_sectors": 688,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SKILL.DAT;1",
+      "clean_path": "/DATA/SKILL.DAT",
+      "size_bytes": 59530,
+      "lba_start": 6552,
+      "lba_sectors": 30,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SKL_U.DAT;1",
+      "clean_path": "/DATA/SKL_U.DAT",
+      "size_bytes": 100186,
+      "lba_start": 6582,
+      "lba_sectors": 49,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SK_PV.DAT;1",
+      "clean_path": "/DATA/SK_PV.DAT",
+      "size_bytes": 229376,
+      "lba_start": 6631,
+      "lba_sectors": 112,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SK_PVU.DAT;1",
+      "clean_path": "/DATA/SK_PVU.DAT",
+      "size_bytes": 65536,
+      "lba_start": 6743,
+      "lba_sectors": 32,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN1A.BIN;1",
+      "clean_path": "/DATA/SN3/SN1A.BIN",
+      "size_bytes": 301040,
+      "lba_start": 7154,
+      "lba_sectors": 147,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN1B.BIN;1",
+      "clean_path": "/DATA/SN3/SN1B.BIN",
+      "size_bytes": 214688,
+      "lba_start": 7301,
+      "lba_sectors": 105,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN1C.BIN;1",
+      "clean_path": "/DATA/SN3/SN1C.BIN",
+      "size_bytes": 158872,
+      "lba_start": 7406,
+      "lba_sectors": 78,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN1D.BIN;1",
+      "clean_path": "/DATA/SN3/SN1D.BIN",
+      "size_bytes": 116880,
+      "lba_start": 7484,
+      "lba_sectors": 58,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN1E.BIN;1",
+      "clean_path": "/DATA/SN3/SN1E.BIN",
+      "size_bytes": 260200,
+      "lba_start": 7542,
+      "lba_sectors": 128,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN1F.BIN;1",
+      "clean_path": "/DATA/SN3/SN1F.BIN",
+      "size_bytes": 153408,
+      "lba_start": 7670,
+      "lba_sectors": 75,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN20.BIN;1",
+      "clean_path": "/DATA/SN3/SN20.BIN",
+      "size_bytes": 81112,
+      "lba_start": 7745,
+      "lba_sectors": 40,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN21.BIN;1",
+      "clean_path": "/DATA/SN3/SN21.BIN",
+      "size_bytes": 108536,
+      "lba_start": 7785,
+      "lba_sectors": 53,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN22.BIN;1",
+      "clean_path": "/DATA/SN3/SN22.BIN",
+      "size_bytes": 161592,
+      "lba_start": 7838,
+      "lba_sectors": 79,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN23.BIN;1",
+      "clean_path": "/DATA/SN3/SN23.BIN",
+      "size_bytes": 191160,
+      "lba_start": 7917,
+      "lba_sectors": 94,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN24.BIN;1",
+      "clean_path": "/DATA/SN3/SN24.BIN",
+      "size_bytes": 178160,
+      "lba_start": 8011,
+      "lba_sectors": 87,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN25.BIN;1",
+      "clean_path": "/DATA/SN3/SN25.BIN",
+      "size_bytes": 125632,
+      "lba_start": 8098,
+      "lba_sectors": 62,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN26.BIN;1",
+      "clean_path": "/DATA/SN3/SN26.BIN",
+      "size_bytes": 233336,
+      "lba_start": 8160,
+      "lba_sectors": 114,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN27.BIN;1",
+      "clean_path": "/DATA/SN3/SN27.BIN",
+      "size_bytes": 139368,
+      "lba_start": 8274,
+      "lba_sectors": 69,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN28.BIN;1",
+      "clean_path": "/DATA/SN3/SN28.BIN",
+      "size_bytes": 174600,
+      "lba_start": 8343,
+      "lba_sectors": 86,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN29.BIN;1",
+      "clean_path": "/DATA/SN3/SN29.BIN",
+      "size_bytes": 160416,
+      "lba_start": 8429,
+      "lba_sectors": 79,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN2A.BIN;1",
+      "clean_path": "/DATA/SN3/SN2A.BIN",
+      "size_bytes": 215584,
+      "lba_start": 8508,
+      "lba_sectors": 106,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN2B.BIN;1",
+      "clean_path": "/DATA/SN3/SN2B.BIN",
+      "size_bytes": 340016,
+      "lba_start": 8614,
+      "lba_sectors": 167,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN2C.BIN;1",
+      "clean_path": "/DATA/SN3/SN2C.BIN",
+      "size_bytes": 102984,
+      "lba_start": 8781,
+      "lba_sectors": 51,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN2D.BIN;1",
+      "clean_path": "/DATA/SN3/SN2D.BIN",
+      "size_bytes": 274456,
+      "lba_start": 8832,
+      "lba_sectors": 135,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN2E.BIN;1",
+      "clean_path": "/DATA/SN3/SN2E.BIN",
+      "size_bytes": 46632,
+      "lba_start": 8967,
+      "lba_sectors": 23,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN00.BIN;1",
+      "clean_path": "/DATA/SN2/SN00.BIN",
+      "size_bytes": 232560,
+      "lba_start": 8990,
+      "lba_sectors": 114,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN01.BIN;1",
+      "clean_path": "/DATA/SN2/SN01.BIN",
+      "size_bytes": 327824,
+      "lba_start": 9104,
+      "lba_sectors": 161,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN02.BIN;1",
+      "clean_path": "/DATA/SN2/SN02.BIN",
+      "size_bytes": 244368,
+      "lba_start": 9265,
+      "lba_sectors": 120,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN03.BIN;1",
+      "clean_path": "/DATA/SN2/SN03.BIN",
+      "size_bytes": 243464,
+      "lba_start": 9385,
+      "lba_sectors": 119,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN04.BIN;1",
+      "clean_path": "/DATA/SN2/SN04.BIN",
+      "size_bytes": 164136,
+      "lba_start": 9504,
+      "lba_sectors": 81,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN05.BIN;1",
+      "clean_path": "/DATA/SN2/SN05.BIN",
+      "size_bytes": 428832,
+      "lba_start": 9585,
+      "lba_sectors": 210,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN06.BIN;1",
+      "clean_path": "/DATA/SN2/SN06.BIN",
+      "size_bytes": 278024,
+      "lba_start": 9795,
+      "lba_sectors": 136,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN07.BIN;1",
+      "clean_path": "/DATA/SN2/SN07.BIN",
+      "size_bytes": 252376,
+      "lba_start": 9931,
+      "lba_sectors": 124,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN08.BIN;1",
+      "clean_path": "/DATA/SN2/SN08.BIN",
+      "size_bytes": 271328,
+      "lba_start": 10055,
+      "lba_sectors": 133,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN09.BIN;1",
+      "clean_path": "/DATA/SN2/SN09.BIN",
+      "size_bytes": 284024,
+      "lba_start": 10188,
+      "lba_sectors": 139,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN0A.BIN;1",
+      "clean_path": "/DATA/SN2/SN0A.BIN",
+      "size_bytes": 255024,
+      "lba_start": 10327,
+      "lba_sectors": 125,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN0B.BIN;1",
+      "clean_path": "/DATA/SN2/SN0B.BIN",
+      "size_bytes": 267272,
+      "lba_start": 10452,
+      "lba_sectors": 131,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN12.BIN;1",
+      "clean_path": "/DATA/SN2/SN12.BIN",
+      "size_bytes": 104176,
+      "lba_start": 10583,
+      "lba_sectors": 51,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN13.BIN;1",
+      "clean_path": "/DATA/SN2/SN13.BIN",
+      "size_bytes": 273992,
+      "lba_start": 10634,
+      "lba_sectors": 134,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN14.BIN;1",
+      "clean_path": "/DATA/SN2/SN14.BIN",
+      "size_bytes": 166232,
+      "lba_start": 10768,
+      "lba_sectors": 82,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN15.BIN;1",
+      "clean_path": "/DATA/SN2/SN15.BIN",
+      "size_bytes": 160472,
+      "lba_start": 10850,
+      "lba_sectors": 79,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN16.BIN;1",
+      "clean_path": "/DATA/SN2/SN16.BIN",
+      "size_bytes": 121224,
+      "lba_start": 10929,
+      "lba_sectors": 60,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN17.BIN;1",
+      "clean_path": "/DATA/SN2/SN17.BIN",
+      "size_bytes": 112192,
+      "lba_start": 10989,
+      "lba_sectors": 55,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN18.BIN;1",
+      "clean_path": "/DATA/SN2/SN18.BIN",
+      "size_bytes": 106888,
+      "lba_start": 11044,
+      "lba_sectors": 53,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN19.BIN;1",
+      "clean_path": "/DATA/SN2/SN19.BIN",
+      "size_bytes": 164704,
+      "lba_start": 11097,
+      "lba_sectors": 81,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN1A.BIN;1",
+      "clean_path": "/DATA/SN1/SN1A.BIN",
+      "size_bytes": 246776,
+      "lba_start": 11178,
+      "lba_sectors": 121,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN1B.BIN;1",
+      "clean_path": "/DATA/SN1/SN1B.BIN",
+      "size_bytes": 163776,
+      "lba_start": 11299,
+      "lba_sectors": 80,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN1C.BIN;1",
+      "clean_path": "/DATA/SN1/SN1C.BIN",
+      "size_bytes": 133040,
+      "lba_start": 11379,
+      "lba_sectors": 65,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN1D.BIN;1",
+      "clean_path": "/DATA/SN1/SN1D.BIN",
+      "size_bytes": 96240,
+      "lba_start": 11444,
+      "lba_sectors": 47,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN1E.BIN;1",
+      "clean_path": "/DATA/SN1/SN1E.BIN",
+      "size_bytes": 199008,
+      "lba_start": 11491,
+      "lba_sectors": 98,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN1F.BIN;1",
+      "clean_path": "/DATA/SN1/SN1F.BIN",
+      "size_bytes": 134536,
+      "lba_start": 11589,
+      "lba_sectors": 66,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN20.BIN;1",
+      "clean_path": "/DATA/SN1/SN20.BIN",
+      "size_bytes": 69256,
+      "lba_start": 11655,
+      "lba_sectors": 34,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN21.BIN;1",
+      "clean_path": "/DATA/SN1/SN21.BIN",
+      "size_bytes": 86064,
+      "lba_start": 11689,
+      "lba_sectors": 43,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN22.BIN;1",
+      "clean_path": "/DATA/SN1/SN22.BIN",
+      "size_bytes": 131224,
+      "lba_start": 11732,
+      "lba_sectors": 65,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN23.BIN;1",
+      "clean_path": "/DATA/SN1/SN23.BIN",
+      "size_bytes": 154952,
+      "lba_start": 11797,
+      "lba_sectors": 76,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN24.BIN;1",
+      "clean_path": "/DATA/SN1/SN24.BIN",
+      "size_bytes": 148168,
+      "lba_start": 11873,
+      "lba_sectors": 73,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN25.BIN;1",
+      "clean_path": "/DATA/SN1/SN25.BIN",
+      "size_bytes": 103000,
+      "lba_start": 11946,
+      "lba_sectors": 51,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN26.BIN;1",
+      "clean_path": "/DATA/SN1/SN26.BIN",
+      "size_bytes": 181928,
+      "lba_start": 11997,
+      "lba_sectors": 89,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN27.BIN;1",
+      "clean_path": "/DATA/SN1/SN27.BIN",
+      "size_bytes": 113160,
+      "lba_start": 12086,
+      "lba_sectors": 56,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN28.BIN;1",
+      "clean_path": "/DATA/SN1/SN28.BIN",
+      "size_bytes": 131816,
+      "lba_start": 12142,
+      "lba_sectors": 65,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN29.BIN;1",
+      "clean_path": "/DATA/SN1/SN29.BIN",
+      "size_bytes": 130680,
+      "lba_start": 12207,
+      "lba_sectors": 64,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN2A.BIN;1",
+      "clean_path": "/DATA/SN1/SN2A.BIN",
+      "size_bytes": 180920,
+      "lba_start": 12271,
+      "lba_sectors": 89,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN2B.BIN;1",
+      "clean_path": "/DATA/SN1/SN2B.BIN",
+      "size_bytes": 269432,
+      "lba_start": 12360,
+      "lba_sectors": 132,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN2C.BIN;1",
+      "clean_path": "/DATA/SN1/SN2C.BIN",
+      "size_bytes": 82664,
+      "lba_start": 12492,
+      "lba_sectors": 41,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN2D.BIN;1",
+      "clean_path": "/DATA/SN1/SN2D.BIN",
+      "size_bytes": 215720,
+      "lba_start": 12533,
+      "lba_sectors": 106,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN2E.BIN;1",
+      "clean_path": "/DATA/SN1/SN2E.BIN",
+      "size_bytes": 40424,
+      "lba_start": 12639,
+      "lba_sectors": 20,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN00.BIN;1",
+      "clean_path": "/DATA/SN0/SN00.BIN",
+      "size_bytes": 179488,
+      "lba_start": 12659,
+      "lba_sectors": 88,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN01.BIN;1",
+      "clean_path": "/DATA/SN0/SN01.BIN",
+      "size_bytes": 256800,
+      "lba_start": 12747,
+      "lba_sectors": 126,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN02.BIN;1",
+      "clean_path": "/DATA/SN0/SN02.BIN",
+      "size_bytes": 200640,
+      "lba_start": 12873,
+      "lba_sectors": 98,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN03.BIN;1",
+      "clean_path": "/DATA/SN0/SN03.BIN",
+      "size_bytes": 195712,
+      "lba_start": 12971,
+      "lba_sectors": 96,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN04.BIN;1",
+      "clean_path": "/DATA/SN0/SN04.BIN",
+      "size_bytes": 126400,
+      "lba_start": 13067,
+      "lba_sectors": 62,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN05.BIN;1",
+      "clean_path": "/DATA/SN0/SN05.BIN",
+      "size_bytes": 338384,
+      "lba_start": 13129,
+      "lba_sectors": 166,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN06.BIN;1",
+      "clean_path": "/DATA/SN0/SN06.BIN",
+      "size_bytes": 213768,
+      "lba_start": 13295,
+      "lba_sectors": 105,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN07.BIN;1",
+      "clean_path": "/DATA/SN0/SN07.BIN",
+      "size_bytes": 198112,
+      "lba_start": 13400,
+      "lba_sectors": 97,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN08.BIN;1",
+      "clean_path": "/DATA/SN0/SN08.BIN",
+      "size_bytes": 214328,
+      "lba_start": 13497,
+      "lba_sectors": 105,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN09.BIN;1",
+      "clean_path": "/DATA/SN0/SN09.BIN",
+      "size_bytes": 227352,
+      "lba_start": 13602,
+      "lba_sectors": 112,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN0A.BIN;1",
+      "clean_path": "/DATA/SN0/SN0A.BIN",
+      "size_bytes": 202160,
+      "lba_start": 13714,
+      "lba_sectors": 99,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN0B.BIN;1",
+      "clean_path": "/DATA/SN0/SN0B.BIN",
+      "size_bytes": 222872,
+      "lba_start": 13813,
+      "lba_sectors": 109,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN12.BIN;1",
+      "clean_path": "/DATA/SN0/SN12.BIN",
+      "size_bytes": 69384,
+      "lba_start": 13922,
+      "lba_sectors": 34,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN13.BIN;1",
+      "clean_path": "/DATA/SN0/SN13.BIN",
+      "size_bytes": 208056,
+      "lba_start": 13956,
+      "lba_sectors": 102,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN14.BIN;1",
+      "clean_path": "/DATA/SN0/SN14.BIN",
+      "size_bytes": 130720,
+      "lba_start": 14058,
+      "lba_sectors": 64,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN15.BIN;1",
+      "clean_path": "/DATA/SN0/SN15.BIN",
+      "size_bytes": 140736,
+      "lba_start": 14122,
+      "lba_sectors": 69,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN16.BIN;1",
+      "clean_path": "/DATA/SN0/SN16.BIN",
+      "size_bytes": 108616,
+      "lba_start": 14191,
+      "lba_sectors": 54,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN17.BIN;1",
+      "clean_path": "/DATA/SN0/SN17.BIN",
+      "size_bytes": 85488,
+      "lba_start": 14245,
+      "lba_sectors": 42,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN18.BIN;1",
+      "clean_path": "/DATA/SN0/SN18.BIN",
+      "size_bytes": 86008,
+      "lba_start": 14287,
+      "lba_sectors": 42,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN19.BIN;1",
+      "clean_path": "/DATA/SN0/SN19.BIN",
+      "size_bytes": 132016,
+      "lba_start": 14329,
+      "lba_sectors": 65,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P15.BIN;1",
+      "clean_path": "/DATA/PL1/P15.BIN",
+      "size_bytes": 1260336,
+      "lba_start": 14394,
+      "lba_sectors": 616,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P16.BIN;1",
+      "clean_path": "/DATA/PL1/P16.BIN",
+      "size_bytes": 998784,
+      "lba_start": 15010,
+      "lba_sectors": 488,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P17.BIN;1",
+      "clean_path": "/DATA/PL1/P17.BIN",
+      "size_bytes": 850448,
+      "lba_start": 15498,
+      "lba_sectors": 416,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P18.BIN;1",
+      "clean_path": "/DATA/PL1/P18.BIN",
+      "size_bytes": 1377144,
+      "lba_start": 15914,
+      "lba_sectors": 673,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P19.BIN;1",
+      "clean_path": "/DATA/PL1/P19.BIN",
+      "size_bytes": 1137808,
+      "lba_start": 16587,
+      "lba_sectors": 556,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P1A.BIN;1",
+      "clean_path": "/DATA/PL1/P1A.BIN",
+      "size_bytes": 1541344,
+      "lba_start": 17143,
+      "lba_sectors": 753,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P1B.BIN;1",
+      "clean_path": "/DATA/PL1/P1B.BIN",
+      "size_bytes": 1290400,
+      "lba_start": 17896,
+      "lba_sectors": 631,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P1C.BIN;1",
+      "clean_path": "/DATA/PL1/P1C.BIN",
+      "size_bytes": 1627456,
+      "lba_start": 18527,
+      "lba_sectors": 795,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P1D.BIN;1",
+      "clean_path": "/DATA/PL1/P1D.BIN",
+      "size_bytes": 1461640,
+      "lba_start": 19322,
+      "lba_sectors": 714,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P1E.BIN;1",
+      "clean_path": "/DATA/PL1/P1E.BIN",
+      "size_bytes": 1307208,
+      "lba_start": 20036,
+      "lba_sectors": 639,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P1F.BIN;1",
+      "clean_path": "/DATA/PL1/P1F.BIN",
+      "size_bytes": 1680496,
+      "lba_start": 20675,
+      "lba_sectors": 821,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P20.BIN;1",
+      "clean_path": "/DATA/PL1/P20.BIN",
+      "size_bytes": 1746456,
+      "lba_start": 21496,
+      "lba_sectors": 853,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P21.BIN;1",
+      "clean_path": "/DATA/PL1/P21.BIN",
+      "size_bytes": 1078056,
+      "lba_start": 22349,
+      "lba_sectors": 527,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P22.BIN;1",
+      "clean_path": "/DATA/PL1/P22.BIN",
+      "size_bytes": 1266336,
+      "lba_start": 22876,
+      "lba_sectors": 619,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P23.BIN;1",
+      "clean_path": "/DATA/PL1/P23.BIN",
+      "size_bytes": 729544,
+      "lba_start": 23495,
+      "lba_sectors": 357,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P24.BIN;1",
+      "clean_path": "/DATA/PL1/P24.BIN",
+      "size_bytes": 1466248,
+      "lba_start": 23852,
+      "lba_sectors": 716,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P25.BIN;1",
+      "clean_path": "/DATA/PL1/P25.BIN",
+      "size_bytes": 1069880,
+      "lba_start": 24568,
+      "lba_sectors": 523,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P26.BIN;1",
+      "clean_path": "/DATA/PL1/P26.BIN",
+      "size_bytes": 1387360,
+      "lba_start": 25091,
+      "lba_sectors": 678,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P27.BIN;1",
+      "clean_path": "/DATA/PL1/P27.BIN",
+      "size_bytes": 1604064,
+      "lba_start": 25769,
+      "lba_sectors": 784,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P28.BIN;1",
+      "clean_path": "/DATA/PL1/P28.BIN",
+      "size_bytes": 998760,
+      "lba_start": 26553,
+      "lba_sectors": 488,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P2E.BIN;1",
+      "clean_path": "/DATA/PL1/P2E.BIN",
+      "size_bytes": 912672,
+      "lba_start": 27041,
+      "lba_sectors": 446,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P2F.BIN;1",
+      "clean_path": "/DATA/PL1/P2F.BIN",
+      "size_bytes": 611416,
+      "lba_start": 27487,
+      "lba_sectors": 299,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P30.BIN;1",
+      "clean_path": "/DATA/PL1/P30.BIN",
+      "size_bytes": 1038952,
+      "lba_start": 27786,
+      "lba_sectors": 508,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P31.BIN;1",
+      "clean_path": "/DATA/PL1/P31.BIN",
+      "size_bytes": 1431784,
+      "lba_start": 28294,
+      "lba_sectors": 700,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P32.BIN;1",
+      "clean_path": "/DATA/PL1/P32.BIN",
+      "size_bytes": 1154152,
+      "lba_start": 28994,
+      "lba_sectors": 564,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P00.BIN;1",
+      "clean_path": "/DATA/PL0/P00.BIN",
+      "size_bytes": 1241024,
+      "lba_start": 29558,
+      "lba_sectors": 606,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P01.BIN;1",
+      "clean_path": "/DATA/PL0/P01.BIN",
+      "size_bytes": 835272,
+      "lba_start": 30164,
+      "lba_sectors": 408,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P02.BIN;1",
+      "clean_path": "/DATA/PL0/P02.BIN",
+      "size_bytes": 867016,
+      "lba_start": 30572,
+      "lba_sectors": 424,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P03.BIN;1",
+      "clean_path": "/DATA/PL0/P03.BIN",
+      "size_bytes": 1034776,
+      "lba_start": 30996,
+      "lba_sectors": 506,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P04.BIN;1",
+      "clean_path": "/DATA/PL0/P04.BIN",
+      "size_bytes": 999680,
+      "lba_start": 31502,
+      "lba_sectors": 489,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P05.BIN;1",
+      "clean_path": "/DATA/PL0/P05.BIN",
+      "size_bytes": 1052016,
+      "lba_start": 31991,
+      "lba_sectors": 514,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P06.BIN;1",
+      "clean_path": "/DATA/PL0/P06.BIN",
+      "size_bytes": 923768,
+      "lba_start": 32505,
+      "lba_sectors": 452,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P07.BIN;1",
+      "clean_path": "/DATA/PL0/P07.BIN",
+      "size_bytes": 1321840,
+      "lba_start": 32957,
+      "lba_sectors": 646,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P08.BIN;1",
+      "clean_path": "/DATA/PL0/P08.BIN",
+      "size_bytes": 756152,
+      "lba_start": 33603,
+      "lba_sectors": 370,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P09.BIN;1",
+      "clean_path": "/DATA/PL0/P09.BIN",
+      "size_bytes": 1217576,
+      "lba_start": 33973,
+      "lba_sectors": 595,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P0A.BIN;1",
+      "clean_path": "/DATA/PL0/P0A.BIN",
+      "size_bytes": 1070376,
+      "lba_start": 34568,
+      "lba_sectors": 523,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P0B.BIN;1",
+      "clean_path": "/DATA/PL0/P0B.BIN",
+      "size_bytes": 943744,
+      "lba_start": 35091,
+      "lba_sectors": 461,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P0C.BIN;1",
+      "clean_path": "/DATA/PL0/P0C.BIN",
+      "size_bytes": 1223544,
+      "lba_start": 35552,
+      "lba_sectors": 598,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P0D.BIN;1",
+      "clean_path": "/DATA/PL0/P0D.BIN",
+      "size_bytes": 960384,
+      "lba_start": 36150,
+      "lba_sectors": 469,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P0E.BIN;1",
+      "clean_path": "/DATA/PL0/P0E.BIN",
+      "size_bytes": 956776,
+      "lba_start": 36619,
+      "lba_sectors": 468,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P0F.BIN;1",
+      "clean_path": "/DATA/PL0/P0F.BIN",
+      "size_bytes": 827080,
+      "lba_start": 37087,
+      "lba_sectors": 404,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P10.BIN;1",
+      "clean_path": "/DATA/PL0/P10.BIN",
+      "size_bytes": 853040,
+      "lba_start": 37491,
+      "lba_sectors": 417,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P11.BIN;1",
+      "clean_path": "/DATA/PL0/P11.BIN",
+      "size_bytes": 977720,
+      "lba_start": 37908,
+      "lba_sectors": 478,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P12.BIN;1",
+      "clean_path": "/DATA/PL0/P12.BIN",
+      "size_bytes": 1279048,
+      "lba_start": 38386,
+      "lba_sectors": 625,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P13.BIN;1",
+      "clean_path": "/DATA/PL0/P13.BIN",
+      "size_bytes": 891520,
+      "lba_start": 39011,
+      "lba_sectors": 436,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P14.BIN;1",
+      "clean_path": "/DATA/PL0/P14.BIN",
+      "size_bytes": 1690136,
+      "lba_start": 39447,
+      "lba_sectors": 826,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/KOF2002.ICO;1",
+      "clean_path": "/DATA/MC/KOF2002.ICO",
+      "size_bytes": 52984,
+      "lba_start": 40274,
+      "lba_sectors": 26,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC00.DAT;1",
+      "clean_path": "/DATA/MC/MC00.DAT",
+      "size_bytes": 323584,
+      "lba_start": 40300,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC01.DAT;1",
+      "clean_path": "/DATA/MC/MC01.DAT",
+      "size_bytes": 323584,
+      "lba_start": 40458,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC02.DAT;1",
+      "clean_path": "/DATA/MC/MC02.DAT",
+      "size_bytes": 323584,
+      "lba_start": 40616,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC03.DAT;1",
+      "clean_path": "/DATA/MC/MC03.DAT",
+      "size_bytes": 323584,
+      "lba_start": 40774,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC04.DAT;1",
+      "clean_path": "/DATA/MC/MC04.DAT",
+      "size_bytes": 323584,
+      "lba_start": 40932,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC05.DAT;1",
+      "clean_path": "/DATA/MC/MC05.DAT",
+      "size_bytes": 323584,
+      "lba_start": 41090,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC06.DAT;1",
+      "clean_path": "/DATA/MC/MC06.DAT",
+      "size_bytes": 323584,
+      "lba_start": 41248,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC07.DAT;1",
+      "clean_path": "/DATA/MC/MC07.DAT",
+      "size_bytes": 323584,
+      "lba_start": 41406,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC08.DAT;1",
+      "clean_path": "/DATA/MC/MC08.DAT",
+      "size_bytes": 323584,
+      "lba_start": 41564,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC09.DAT;1",
+      "clean_path": "/DATA/MC/MC09.DAT",
+      "size_bytes": 323584,
+      "lba_start": 41722,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC0A.DAT;1",
+      "clean_path": "/DATA/MC/MC0A.DAT",
+      "size_bytes": 323584,
+      "lba_start": 41880,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC0B.DAT;1",
+      "clean_path": "/DATA/MC/MC0B.DAT",
+      "size_bytes": 323584,
+      "lba_start": 42038,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC0C.DAT;1",
+      "clean_path": "/DATA/MC/MC0C.DAT",
+      "size_bytes": 323584,
+      "lba_start": 42196,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC0D.DAT;1",
+      "clean_path": "/DATA/MC/MC0D.DAT",
+      "size_bytes": 323584,
+      "lba_start": 42354,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC0E.DAT;1",
+      "clean_path": "/DATA/MC/MC0E.DAT",
+      "size_bytes": 323584,
+      "lba_start": 42512,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC0F.DAT;1",
+      "clean_path": "/DATA/MC/MC0F.DAT",
+      "size_bytes": 323584,
+      "lba_start": 42670,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC10.DAT;1",
+      "clean_path": "/DATA/MC/MC10.DAT",
+      "size_bytes": 323584,
+      "lba_start": 42828,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC11.DAT;1",
+      "clean_path": "/DATA/MC/MC11.DAT",
+      "size_bytes": 323584,
+      "lba_start": 42986,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC12.DAT;1",
+      "clean_path": "/DATA/MC/MC12.DAT",
+      "size_bytes": 323584,
+      "lba_start": 43144,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC13.DAT;1",
+      "clean_path": "/DATA/MC/MC13.DAT",
+      "size_bytes": 323584,
+      "lba_start": 43302,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC14.DAT;1",
+      "clean_path": "/DATA/MC/MC14.DAT",
+      "size_bytes": 323584,
+      "lba_start": 43460,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC15.DAT;1",
+      "clean_path": "/DATA/MC/MC15.DAT",
+      "size_bytes": 323584,
+      "lba_start": 43618,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC16.DAT;1",
+      "clean_path": "/DATA/MC/MC16.DAT",
+      "size_bytes": 323584,
+      "lba_start": 43776,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC17.DAT;1",
+      "clean_path": "/DATA/MC/MC17.DAT",
+      "size_bytes": 323584,
+      "lba_start": 43934,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/LOGO/KOF50.RAW;1",
+      "clean_path": "/DATA/LOGO/KOF50.RAW",
+      "size_bytes": 983040,
+      "lba_start": 44572,
+      "lba_sectors": 480,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/LOGO/KOF60.RAW;1",
+      "clean_path": "/DATA/LOGO/KOF60.RAW",
+      "size_bytes": 983040,
+      "lba_start": 45052,
+      "lba_sectors": 480,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/LOGO/KOF60T.RAW;1",
+      "clean_path": "/DATA/LOGO/KOF60T.RAW",
+      "size_bytes": 983040,
+      "lba_start": 45532,
+      "lba_sectors": 480,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/LOGO/KOFTEST6.RAW;1",
+      "clean_path": "/DATA/LOGO/KOFTEST6.RAW",
+      "size_bytes": 921600,
+      "lba_start": 46012,
+      "lba_sectors": 450,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/LOGO/LOGO00.DAT;1",
+      "clean_path": "/DATA/LOGO/LOGO00.DAT",
+      "size_bytes": 1310720,
+      "lba_start": 46462,
+      "lba_sectors": 640,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/LOGO/LOGO01.DAT;1",
+      "clean_path": "/DATA/LOGO/LOGO01.DAT",
+      "size_bytes": 1310720,
+      "lba_start": 47102,
+      "lba_sectors": 640,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/LOGO/LOGO02.DAT;1",
+      "clean_path": "/DATA/LOGO/LOGO02.DAT",
+      "size_bytes": 1310720,
+      "lba_start": 47742,
+      "lba_sectors": 640,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P15.BIN;1",
+      "clean_path": "/DATA/EPL3/P15.BIN",
+      "size_bytes": 92672,
+      "lba_start": 48862,
+      "lba_sectors": 46,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P16.BIN;1",
+      "clean_path": "/DATA/EPL3/P16.BIN",
+      "size_bytes": 86040,
+      "lba_start": 48908,
+      "lba_sectors": 43,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P17.BIN;1",
+      "clean_path": "/DATA/EPL3/P17.BIN",
+      "size_bytes": 80096,
+      "lba_start": 48951,
+      "lba_sectors": 40,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P18.BIN;1",
+      "clean_path": "/DATA/EPL3/P18.BIN",
+      "size_bytes": 90184,
+      "lba_start": 48991,
+      "lba_sectors": 45,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P19.BIN;1",
+      "clean_path": "/DATA/EPL3/P19.BIN",
+      "size_bytes": 86752,
+      "lba_start": 49036,
+      "lba_sectors": 43,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P1A.BIN;1",
+      "clean_path": "/DATA/EPL3/P1A.BIN",
+      "size_bytes": 129864,
+      "lba_start": 49079,
+      "lba_sectors": 64,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P1B.BIN;1",
+      "clean_path": "/DATA/EPL3/P1B.BIN",
+      "size_bytes": 144736,
+      "lba_start": 49143,
+      "lba_sectors": 71,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P1C.BIN;1",
+      "clean_path": "/DATA/EPL3/P1C.BIN",
+      "size_bytes": 111968,
+      "lba_start": 49214,
+      "lba_sectors": 55,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P1D.BIN;1",
+      "clean_path": "/DATA/EPL3/P1D.BIN",
+      "size_bytes": 161448,
+      "lba_start": 49269,
+      "lba_sectors": 79,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P1E.BIN;1",
+      "clean_path": "/DATA/EPL3/P1E.BIN",
+      "size_bytes": 117640,
+      "lba_start": 49348,
+      "lba_sectors": 58,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P1F.BIN;1",
+      "clean_path": "/DATA/EPL3/P1F.BIN",
+      "size_bytes": 124952,
+      "lba_start": 49406,
+      "lba_sectors": 62,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P20.BIN;1",
+      "clean_path": "/DATA/EPL3/P20.BIN",
+      "size_bytes": 114696,
+      "lba_start": 49468,
+      "lba_sectors": 57,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P21.BIN;1",
+      "clean_path": "/DATA/EPL3/P21.BIN",
+      "size_bytes": 88512,
+      "lba_start": 49525,
+      "lba_sectors": 44,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P22.BIN;1",
+      "clean_path": "/DATA/EPL3/P22.BIN",
+      "size_bytes": 114032,
+      "lba_start": 49569,
+      "lba_sectors": 56,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P23.BIN;1",
+      "clean_path": "/DATA/EPL3/P23.BIN",
+      "size_bytes": 92408,
+      "lba_start": 49625,
+      "lba_sectors": 46,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P24.BIN;1",
+      "clean_path": "/DATA/EPL3/P24.BIN",
+      "size_bytes": 111976,
+      "lba_start": 49671,
+      "lba_sectors": 55,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P25.BIN;1",
+      "clean_path": "/DATA/EPL3/P25.BIN",
+      "size_bytes": 85040,
+      "lba_start": 49726,
+      "lba_sectors": 42,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P26.BIN;1",
+      "clean_path": "/DATA/EPL3/P26.BIN",
+      "size_bytes": 112384,
+      "lba_start": 49768,
+      "lba_sectors": 55,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P27.BIN;1",
+      "clean_path": "/DATA/EPL3/P27.BIN",
+      "size_bytes": 92920,
+      "lba_start": 49823,
+      "lba_sectors": 46,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P28.BIN;1",
+      "clean_path": "/DATA/EPL3/P28.BIN",
+      "size_bytes": 102312,
+      "lba_start": 49869,
+      "lba_sectors": 50,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P2E.BIN;1",
+      "clean_path": "/DATA/EPL3/P2E.BIN",
+      "size_bytes": 11240,
+      "lba_start": 49919,
+      "lba_sectors": 6,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P2F.BIN;1",
+      "clean_path": "/DATA/EPL3/P2F.BIN",
+      "size_bytes": 10512,
+      "lba_start": 49925,
+      "lba_sectors": 6,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P30.BIN;1",
+      "clean_path": "/DATA/EPL3/P30.BIN",
+      "size_bytes": 102400,
+      "lba_start": 49931,
+      "lba_sectors": 50,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P31.BIN;1",
+      "clean_path": "/DATA/EPL3/P31.BIN",
+      "size_bytes": 89776,
+      "lba_start": 49981,
+      "lba_sectors": 44,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P32.BIN;1",
+      "clean_path": "/DATA/EPL3/P32.BIN",
+      "size_bytes": 99320,
+      "lba_start": 50025,
+      "lba_sectors": 49,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P00.BIN;1",
+      "clean_path": "/DATA/EPL2/P00.BIN",
+      "size_bytes": 101144,
+      "lba_start": 50074,
+      "lba_sectors": 50,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P01.BIN;1",
+      "clean_path": "/DATA/EPL2/P01.BIN",
+      "size_bytes": 88000,
+      "lba_start": 50124,
+      "lba_sectors": 43,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P02.BIN;1",
+      "clean_path": "/DATA/EPL2/P02.BIN",
+      "size_bytes": 99248,
+      "lba_start": 50167,
+      "lba_sectors": 49,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P03.BIN;1",
+      "clean_path": "/DATA/EPL2/P03.BIN",
+      "size_bytes": 100432,
+      "lba_start": 50216,
+      "lba_sectors": 50,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P04.BIN;1",
+      "clean_path": "/DATA/EPL2/P04.BIN",
+      "size_bytes": 98088,
+      "lba_start": 50266,
+      "lba_sectors": 48,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P05.BIN;1",
+      "clean_path": "/DATA/EPL2/P05.BIN",
+      "size_bytes": 105152,
+      "lba_start": 50314,
+      "lba_sectors": 52,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P06.BIN;1",
+      "clean_path": "/DATA/EPL2/P06.BIN",
+      "size_bytes": 109744,
+      "lba_start": 50366,
+      "lba_sectors": 54,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P07.BIN;1",
+      "clean_path": "/DATA/EPL2/P07.BIN",
+      "size_bytes": 158872,
+      "lba_start": 50420,
+      "lba_sectors": 78,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P08.BIN;1",
+      "clean_path": "/DATA/EPL2/P08.BIN",
+      "size_bytes": 78184,
+      "lba_start": 50498,
+      "lba_sectors": 39,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P09.BIN;1",
+      "clean_path": "/DATA/EPL2/P09.BIN",
+      "size_bytes": 91904,
+      "lba_start": 50537,
+      "lba_sectors": 45,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P0A.BIN;1",
+      "clean_path": "/DATA/EPL2/P0A.BIN",
+      "size_bytes": 117976,
+      "lba_start": 50582,
+      "lba_sectors": 58,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P0B.BIN;1",
+      "clean_path": "/DATA/EPL2/P0B.BIN",
+      "size_bytes": 99128,
+      "lba_start": 50640,
+      "lba_sectors": 49,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P0C.BIN;1",
+      "clean_path": "/DATA/EPL2/P0C.BIN",
+      "size_bytes": 86352,
+      "lba_start": 50689,
+      "lba_sectors": 43,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P0D.BIN;1",
+      "clean_path": "/DATA/EPL2/P0D.BIN",
+      "size_bytes": 98032,
+      "lba_start": 50732,
+      "lba_sectors": 48,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P0E.BIN;1",
+      "clean_path": "/DATA/EPL2/P0E.BIN",
+      "size_bytes": 98664,
+      "lba_start": 50780,
+      "lba_sectors": 49,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P0F.BIN;1",
+      "clean_path": "/DATA/EPL2/P0F.BIN",
+      "size_bytes": 79392,
+      "lba_start": 50829,
+      "lba_sectors": 39,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P10.BIN;1",
+      "clean_path": "/DATA/EPL2/P10.BIN",
+      "size_bytes": 96120,
+      "lba_start": 50868,
+      "lba_sectors": 47,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P11.BIN;1",
+      "clean_path": "/DATA/EPL2/P11.BIN",
+      "size_bytes": 85096,
+      "lba_start": 50915,
+      "lba_sectors": 42,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P12.BIN;1",
+      "clean_path": "/DATA/EPL2/P12.BIN",
+      "size_bytes": 92624,
+      "lba_start": 50957,
+      "lba_sectors": 46,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P13.BIN;1",
+      "clean_path": "/DATA/EPL2/P13.BIN",
+      "size_bytes": 77760,
+      "lba_start": 51003,
+      "lba_sectors": 38,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P14.BIN;1",
+      "clean_path": "/DATA/EPL2/P14.BIN",
+      "size_bytes": 89640,
+      "lba_start": 51041,
+      "lba_sectors": 44,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P15.BIN;1",
+      "clean_path": "/DATA/EPL1/P15.BIN",
+      "size_bytes": 72528,
+      "lba_start": 51085,
+      "lba_sectors": 36,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P16.BIN;1",
+      "clean_path": "/DATA/EPL1/P16.BIN",
+      "size_bytes": 64808,
+      "lba_start": 51121,
+      "lba_sectors": 32,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P17.BIN;1",
+      "clean_path": "/DATA/EPL1/P17.BIN",
+      "size_bytes": 60040,
+      "lba_start": 51153,
+      "lba_sectors": 30,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P18.BIN;1",
+      "clean_path": "/DATA/EPL1/P18.BIN",
+      "size_bytes": 80384,
+      "lba_start": 51183,
+      "lba_sectors": 40,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P19.BIN;1",
+      "clean_path": "/DATA/EPL1/P19.BIN",
+      "size_bytes": 68952,
+      "lba_start": 51223,
+      "lba_sectors": 34,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P1A.BIN;1",
+      "clean_path": "/DATA/EPL1/P1A.BIN",
+      "size_bytes": 97336,
+      "lba_start": 51257,
+      "lba_sectors": 48,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P1B.BIN;1",
+      "clean_path": "/DATA/EPL1/P1B.BIN",
+      "size_bytes": 113144,
+      "lba_start": 51305,
+      "lba_sectors": 56,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P1C.BIN;1",
+      "clean_path": "/DATA/EPL1/P1C.BIN",
+      "size_bytes": 85296,
+      "lba_start": 51361,
+      "lba_sectors": 42,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P1D.BIN;1",
+      "clean_path": "/DATA/EPL1/P1D.BIN",
+      "size_bytes": 120840,
+      "lba_start": 51403,
+      "lba_sectors": 60,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P1E.BIN;1",
+      "clean_path": "/DATA/EPL1/P1E.BIN",
+      "size_bytes": 101032,
+      "lba_start": 51463,
+      "lba_sectors": 50,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P1F.BIN;1",
+      "clean_path": "/DATA/EPL1/P1F.BIN",
+      "size_bytes": 110664,
+      "lba_start": 51513,
+      "lba_sectors": 55,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P20.BIN;1",
+      "clean_path": "/DATA/EPL1/P20.BIN",
+      "size_bytes": 88216,
+      "lba_start": 51568,
+      "lba_sectors": 44,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P21.BIN;1",
+      "clean_path": "/DATA/EPL1/P21.BIN",
+      "size_bytes": 72576,
+      "lba_start": 51612,
+      "lba_sectors": 36,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P22.BIN;1",
+      "clean_path": "/DATA/EPL1/P22.BIN",
+      "size_bytes": 89800,
+      "lba_start": 51648,
+      "lba_sectors": 44,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P23.BIN;1",
+      "clean_path": "/DATA/EPL1/P23.BIN",
+      "size_bytes": 70704,
+      "lba_start": 51692,
+      "lba_sectors": 35,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P24.BIN;1",
+      "clean_path": "/DATA/EPL1/P24.BIN",
+      "size_bytes": 86960,
+      "lba_start": 51727,
+      "lba_sectors": 43,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P25.BIN;1",
+      "clean_path": "/DATA/EPL1/P25.BIN",
+      "size_bytes": 64392,
+      "lba_start": 51770,
+      "lba_sectors": 32,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P26.BIN;1",
+      "clean_path": "/DATA/EPL1/P26.BIN",
+      "size_bytes": 85560,
+      "lba_start": 51802,
+      "lba_sectors": 42,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P27.BIN;1",
+      "clean_path": "/DATA/EPL1/P27.BIN",
+      "size_bytes": 74160,
+      "lba_start": 51844,
+      "lba_sectors": 37,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P28.BIN;1",
+      "clean_path": "/DATA/EPL1/P28.BIN",
+      "size_bytes": 83296,
+      "lba_start": 51881,
+      "lba_sectors": 41,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P2E.BIN;1",
+      "clean_path": "/DATA/EPL1/P2E.BIN",
+      "size_bytes": 11192,
+      "lba_start": 51922,
+      "lba_sectors": 6,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P2F.BIN;1",
+      "clean_path": "/DATA/EPL1/P2F.BIN",
+      "size_bytes": 10392,
+      "lba_start": 51928,
+      "lba_sectors": 6,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P30.BIN;1",
+      "clean_path": "/DATA/EPL1/P30.BIN",
+      "size_bytes": 80000,
+      "lba_start": 51934,
+      "lba_sectors": 40,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P31.BIN;1",
+      "clean_path": "/DATA/EPL1/P31.BIN",
+      "size_bytes": 72784,
+      "lba_start": 51974,
+      "lba_sectors": 36,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P32.BIN;1",
+      "clean_path": "/DATA/EPL1/P32.BIN",
+      "size_bytes": 78592,
+      "lba_start": 52010,
+      "lba_sectors": 39,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P00.BIN;1",
+      "clean_path": "/DATA/EPL0/P00.BIN",
+      "size_bytes": 83312,
+      "lba_start": 52049,
+      "lba_sectors": 41,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P01.BIN;1",
+      "clean_path": "/DATA/EPL0/P01.BIN",
+      "size_bytes": 67432,
+      "lba_start": 52090,
+      "lba_sectors": 33,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P02.BIN;1",
+      "clean_path": "/DATA/EPL0/P02.BIN",
+      "size_bytes": 76808,
+      "lba_start": 52123,
+      "lba_sectors": 38,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P03.BIN;1",
+      "clean_path": "/DATA/EPL0/P03.BIN",
+      "size_bytes": 74256,
+      "lba_start": 52161,
+      "lba_sectors": 37,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P04.BIN;1",
+      "clean_path": "/DATA/EPL0/P04.BIN",
+      "size_bytes": 76160,
+      "lba_start": 52198,
+      "lba_sectors": 38,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P05.BIN;1",
+      "clean_path": "/DATA/EPL0/P05.BIN",
+      "size_bytes": 77664,
+      "lba_start": 52236,
+      "lba_sectors": 38,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P06.BIN;1",
+      "clean_path": "/DATA/EPL0/P06.BIN",
+      "size_bytes": 80760,
+      "lba_start": 52274,
+      "lba_sectors": 40,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P07.BIN;1",
+      "clean_path": "/DATA/EPL0/P07.BIN",
+      "size_bytes": 131832,
+      "lba_start": 52314,
+      "lba_sectors": 65,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P08.BIN;1",
+      "clean_path": "/DATA/EPL0/P08.BIN",
+      "size_bytes": 60448,
+      "lba_start": 52379,
+      "lba_sectors": 30,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P09.BIN;1",
+      "clean_path": "/DATA/EPL0/P09.BIN",
+      "size_bytes": 70144,
+      "lba_start": 52409,
+      "lba_sectors": 35,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P0A.BIN;1",
+      "clean_path": "/DATA/EPL0/P0A.BIN",
+      "size_bytes": 91632,
+      "lba_start": 52444,
+      "lba_sectors": 45,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P0B.BIN;1",
+      "clean_path": "/DATA/EPL0/P0B.BIN",
+      "size_bytes": 85712,
+      "lba_start": 52489,
+      "lba_sectors": 42,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P0C.BIN;1",
+      "clean_path": "/DATA/EPL0/P0C.BIN",
+      "size_bytes": 65472,
+      "lba_start": 52531,
+      "lba_sectors": 32,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P0D.BIN;1",
+      "clean_path": "/DATA/EPL0/P0D.BIN",
+      "size_bytes": 76384,
+      "lba_start": 52563,
+      "lba_sectors": 38,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P0E.BIN;1",
+      "clean_path": "/DATA/EPL0/P0E.BIN",
+      "size_bytes": 76096,
+      "lba_start": 52601,
+      "lba_sectors": 38,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P0F.BIN;1",
+      "clean_path": "/DATA/EPL0/P0F.BIN",
+      "size_bytes": 61016,
+      "lba_start": 52639,
+      "lba_sectors": 30,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P10.BIN;1",
+      "clean_path": "/DATA/EPL0/P10.BIN",
+      "size_bytes": 75776,
+      "lba_start": 52669,
+      "lba_sectors": 37,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P11.BIN;1",
+      "clean_path": "/DATA/EPL0/P11.BIN",
+      "size_bytes": 65432,
+      "lba_start": 52706,
+      "lba_sectors": 32,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P12.BIN;1",
+      "clean_path": "/DATA/EPL0/P12.BIN",
+      "size_bytes": 67936,
+      "lba_start": 52738,
+      "lba_sectors": 34,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P13.BIN;1",
+      "clean_path": "/DATA/EPL0/P13.BIN",
+      "size_bytes": 58760,
+      "lba_start": 52772,
+      "lba_sectors": 29,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P14.BIN;1",
+      "clean_path": "/DATA/EPL0/P14.BIN",
+      "size_bytes": 68696,
+      "lba_start": 52801,
+      "lba_sectors": 34,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGA0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGA0.BIN",
+      "size_bytes": 1009632,
+      "lba_start": 52835,
+      "lba_sectors": 493,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGA1.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGA1.BIN",
+      "size_bytes": 1073024,
+      "lba_start": 53328,
+      "lba_sectors": 524,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGA2.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGA2.BIN",
+      "size_bytes": 1049680,
+      "lba_start": 53852,
+      "lba_sectors": 513,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGB0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGB0.BIN",
+      "size_bytes": 2502176,
+      "lba_start": 54365,
+      "lba_sectors": 1222,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGB1.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGB1.BIN",
+      "size_bytes": 2350480,
+      "lba_start": 55587,
+      "lba_sectors": 1148,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGB2.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGB2.BIN",
+      "size_bytes": 2436256,
+      "lba_start": 56735,
+      "lba_sectors": 1190,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGC0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGC0.BIN",
+      "size_bytes": 1340048,
+      "lba_start": 57925,
+      "lba_sectors": 655,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGC1.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGC1.BIN",
+      "size_bytes": 1342704,
+      "lba_start": 58580,
+      "lba_sectors": 656,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGC2.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGC2.BIN",
+      "size_bytes": 1361296,
+      "lba_start": 59236,
+      "lba_sectors": 665,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGC3.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGC3.BIN",
+      "size_bytes": 1395984,
+      "lba_start": 59901,
+      "lba_sectors": 682,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGD0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGD0.BIN",
+      "size_bytes": 1278048,
+      "lba_start": 60583,
+      "lba_sectors": 625,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGD1.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGD1.BIN",
+      "size_bytes": 695232,
+      "lba_start": 61208,
+      "lba_sectors": 340,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGD2.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGD2.BIN",
+      "size_bytes": 786496,
+      "lba_start": 61548,
+      "lba_sectors": 385,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGE0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGE0.BIN",
+      "size_bytes": 1539008,
+      "lba_start": 61933,
+      "lba_sectors": 752,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGF0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGF0.BIN",
+      "size_bytes": 1166368,
+      "lba_start": 62685,
+      "lba_sectors": 570,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGF1.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGF1.BIN",
+      "size_bytes": 1020992,
+      "lba_start": 63255,
+      "lba_sectors": 499,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGF2.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGF2.BIN",
+      "size_bytes": 1202480,
+      "lba_start": 63754,
+      "lba_sectors": 588,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGG0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGG0.BIN",
+      "size_bytes": 2291248,
+      "lba_start": 64342,
+      "lba_sectors": 1119,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGG1.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGG1.BIN",
+      "size_bytes": 2424288,
+      "lba_start": 65461,
+      "lba_sectors": 1184,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGG2.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGG2.BIN",
+      "size_bytes": 2424288,
+      "lba_start": 66645,
+      "lba_sectors": 1184,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGG3.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGG3.BIN",
+      "size_bytes": 2424256,
+      "lba_start": 67829,
+      "lba_sectors": 1184,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGH0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGH0.BIN",
+      "size_bytes": 1304544,
+      "lba_start": 69013,
+      "lba_sectors": 637,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGI0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGI0.BIN",
+      "size_bytes": 2685920,
+      "lba_start": 69650,
+      "lba_sectors": 1312,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/BOSS.BIN;1",
+      "clean_path": "/DATA/BASE/BOSS.BIN",
+      "size_bytes": 330728,
+      "lba_start": 72613,
+      "lba_sectors": 162,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/BOSSB.BIN;1",
+      "clean_path": "/DATA/BASE/BOSSB.BIN",
+      "size_bytes": 504040,
+      "lba_start": 72775,
+      "lba_sectors": 247,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/GAME.BIN;1",
+      "clean_path": "/DATA/BASE/GAME.BIN",
+      "size_bytes": 2453584,
+      "lba_start": 75796,
+      "lba_sectors": 1199,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/OSEL.BIN;1",
+      "clean_path": "/DATA/BASE/OSEL.BIN",
+      "size_bytes": 3193512,
+      "lba_start": 76995,
+      "lba_sectors": 1560,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/OSELB.BIN;1",
+      "clean_path": "/DATA/BASE/OSELB.BIN",
+      "size_bytes": 3969120,
+      "lba_start": 78555,
+      "lba_sectors": 1939,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/PSEL.BIN;1",
+      "clean_path": "/DATA/BASE/PSEL.BIN",
+      "size_bytes": 715592,
+      "lba_start": 80494,
+      "lba_sectors": 350,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/PSELB.BIN;1",
+      "clean_path": "/DATA/BASE/PSELB.BIN",
+      "size_bytes": 735824,
+      "lba_start": 80844,
+      "lba_sectors": 360,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/TITLE.BIN;1",
+      "clean_path": "/DATA/BASE/TITLE.BIN",
+      "size_bytes": 2682592,
+      "lba_start": 81204,
+      "lba_sectors": 1310,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/TITLEB.BIN;1",
+      "clean_path": "/DATA/BASE/TITLEB.BIN",
+      "size_bytes": 3053216,
+      "lba_start": 82514,
+      "lba_sectors": 1491,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/WDEMO.BIN;1",
+      "clean_path": "/DATA/BASE/WDEMO.BIN",
+      "size_bytes": 1162360,
+      "lba_start": 84005,
+      "lba_sectors": 568,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/WDEMOB.BIN;1",
+      "clean_path": "/DATA/BASE/WDEMOB.BIN",
+      "size_bytes": 862872,
+      "lba_start": 84573,
+      "lba_sectors": 422,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/ART_BASE/ART_S00.GRC;1",
+      "clean_path": "/DATA/ART_BASE/ART_S00.GRC",
+      "size_bytes": 284796,
+      "lba_start": 85227,
+      "lba_sectors": 140,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/ART_BASE/ART_S01.GRC;1",
+      "clean_path": "/DATA/ART_BASE/ART_S01.GRC",
+      "size_bytes": 306610,
+      "lba_start": 85367,
+      "lba_sectors": 150,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/ART_BASE/ART_S02.GRC;1",
+      "clean_path": "/DATA/ART_BASE/ART_S02.GRC",
+      "size_bytes": 281558,
+      "lba_start": 85517,
+      "lba_sectors": 138,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/ART_BASE/ART_S03.GRC;1",
+      "clean_path": "/DATA/ART_BASE/ART_S03.GRC",
+      "size_bytes": 112856,
+      "lba_start": 85655,
+      "lba_sectors": 56,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/ART_BASE/ART_S04.GRC;1",
+      "clean_path": "/DATA/ART_BASE/ART_S04.GRC",
+      "size_bytes": 68888,
+      "lba_start": 85711,
+      "lba_sectors": 34,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/ART_BASE/ART_S05.GRC;1",
+      "clean_path": "/DATA/ART_BASE/ART_S05.GRC",
+      "size_bytes": 69420,
+      "lba_start": 85745,
+      "lba_sectors": 34,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/ADX/BGM.AFS;1",
+      "clean_path": "/ADX/BGM.AFS",
+      "size_bytes": 170283008,
+      "lba_start": 106527,
+      "lba_sectors": 83146,
+      "category": "container"
+    }
+  ],
+  "files": [
+    {
+      "iso_path": "/SYSTEM.CNF;1",
+      "clean_path": "/SYSTEM.CNF",
+      "size_bytes": 56,
+      "lba_start": 46,
+      "lba_sectors": 1,
+      "category": "system"
+    },
+    {
+      "iso_path": "/SLES_533.81;1",
+      "clean_path": "/SLES_533.81",
+      "size_bytes": 4199640,
+      "lba_start": 47,
+      "lba_sectors": 2051,
+      "category": "executable"
+    },
+    {
+      "iso_path": "/IGN.SFD;1",
+      "clean_path": "/IGN.SFD",
+      "size_bytes": 5781504,
+      "lba_start": 2098,
+      "lba_sectors": 2823,
+      "category": "media"
+    },
+    {
+      "iso_path": "/MODULES/CRI_ADXI.IRX;1",
+      "clean_path": "/MODULES/CRI_ADXI.IRX",
+      "size_bytes": 58021,
+      "lba_start": 4921,
+      "lba_sectors": 29,
+      "category": "iop_module"
+    },
+    {
+      "iso_path": "/MODULES/IOPRP300.IMG;1",
+      "clean_path": "/MODULES/IOPRP300.IMG",
+      "size_bytes": 275345,
+      "lba_start": 4950,
+      "lba_sectors": 135,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/MODULES/LIBSD.IRX;1",
+      "clean_path": "/MODULES/LIBSD.IRX",
+      "size_bytes": 28661,
+      "lba_start": 5085,
+      "lba_sectors": 14,
+      "category": "iop_module"
+    },
+    {
+      "iso_path": "/MODULES/MCMAN.IRX;1",
+      "clean_path": "/MODULES/MCMAN.IRX",
+      "size_bytes": 95909,
+      "lba_start": 5099,
+      "lba_sectors": 47,
+      "category": "iop_module"
+    },
+    {
+      "iso_path": "/MODULES/MCSERV.IRX;1",
+      "clean_path": "/MODULES/MCSERV.IRX",
+      "size_bytes": 7417,
+      "lba_start": 5146,
+      "lba_sectors": 4,
+      "category": "iop_module"
+    },
+    {
+      "iso_path": "/MODULES/PADMAN.IRX;1",
+      "clean_path": "/MODULES/PADMAN.IRX",
+      "size_bytes": 44869,
+      "lba_start": 5150,
+      "lba_sectors": 22,
+      "category": "iop_module"
+    },
+    {
+      "iso_path": "/MODULES/SIO2MAN.IRX;1",
+      "clean_path": "/MODULES/SIO2MAN.IRX",
+      "size_bytes": 6641,
+      "lba_start": 5172,
+      "lba_sectors": 4,
+      "category": "iop_module"
+    },
+    {
+      "iso_path": "/DATA/RNK_BG.DAT;1",
+      "clean_path": "/DATA/RNK_BG.DAT",
+      "size_bytes": 1409024,
+      "lba_start": 5176,
+      "lba_sectors": 688,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/RNK_BGU.DAT;1",
+      "clean_path": "/DATA/RNK_BGU.DAT",
+      "size_bytes": 1409024,
+      "lba_start": 5864,
+      "lba_sectors": 688,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SKILL.DAT;1",
+      "clean_path": "/DATA/SKILL.DAT",
+      "size_bytes": 59530,
+      "lba_start": 6552,
+      "lba_sectors": 30,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SKL_U.DAT;1",
+      "clean_path": "/DATA/SKL_U.DAT",
+      "size_bytes": 100186,
+      "lba_start": 6582,
+      "lba_sectors": 49,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SK_PV.DAT;1",
+      "clean_path": "/DATA/SK_PV.DAT",
+      "size_bytes": 229376,
+      "lba_start": 6631,
+      "lba_sectors": 112,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SK_PVU.DAT;1",
+      "clean_path": "/DATA/SK_PVU.DAT",
+      "size_bytes": 65536,
+      "lba_start": 6743,
+      "lba_sectors": 32,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SUB/FIX.GRC;1",
+      "clean_path": "/DATA/SUB/FIX.GRC",
+      "size_bytes": 231245,
+      "lba_start": 6775,
+      "lba_sectors": 113,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/SUB/MOZI02_0.GRC;1",
+      "clean_path": "/DATA/SUB/MOZI02_0.GRC",
+      "size_bytes": 54509,
+      "lba_start": 6888,
+      "lba_sectors": 27,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/SUB/MOZI02_1.GRC;1",
+      "clean_path": "/DATA/SUB/MOZI02_1.GRC",
+      "size_bytes": 24474,
+      "lba_start": 6915,
+      "lba_sectors": 12,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/SUB/NOW_00.GRC;1",
+      "clean_path": "/DATA/SUB/NOW_00.GRC",
+      "size_bytes": 61035,
+      "lba_start": 6927,
+      "lba_sectors": 30,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/SUB/NOW_01.GRC;1",
+      "clean_path": "/DATA/SUB/NOW_01.GRC",
+      "size_bytes": 111390,
+      "lba_start": 6957,
+      "lba_sectors": 55,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/SUB/NOW_T20.GRC;1",
+      "clean_path": "/DATA/SUB/NOW_T20.GRC",
+      "size_bytes": 63362,
+      "lba_start": 7012,
+      "lba_sectors": 31,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/SUB/NOW_T30.GRC;1",
+      "clean_path": "/DATA/SUB/NOW_T30.GRC",
+      "size_bytes": 61965,
+      "lba_start": 7043,
+      "lba_sectors": 31,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/SUB/NOW_T40.GRC;1",
+      "clean_path": "/DATA/SUB/NOW_T40.GRC",
+      "size_bytes": 49589,
+      "lba_start": 7074,
+      "lba_sectors": 25,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/SUB/OPTIONBG.GRC;1",
+      "clean_path": "/DATA/SUB/OPTIONBG.GRC",
+      "size_bytes": 16174,
+      "lba_start": 7099,
+      "lba_sectors": 8,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/SUB/TITLE256.GRC;1",
+      "clean_path": "/DATA/SUB/TITLE256.GRC",
+      "size_bytes": 96084,
+      "lba_start": 7107,
+      "lba_sectors": 47,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN1A.BIN;1",
+      "clean_path": "/DATA/SN3/SN1A.BIN",
+      "size_bytes": 301040,
+      "lba_start": 7154,
+      "lba_sectors": 147,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN1B.BIN;1",
+      "clean_path": "/DATA/SN3/SN1B.BIN",
+      "size_bytes": 214688,
+      "lba_start": 7301,
+      "lba_sectors": 105,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN1C.BIN;1",
+      "clean_path": "/DATA/SN3/SN1C.BIN",
+      "size_bytes": 158872,
+      "lba_start": 7406,
+      "lba_sectors": 78,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN1D.BIN;1",
+      "clean_path": "/DATA/SN3/SN1D.BIN",
+      "size_bytes": 116880,
+      "lba_start": 7484,
+      "lba_sectors": 58,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN1E.BIN;1",
+      "clean_path": "/DATA/SN3/SN1E.BIN",
+      "size_bytes": 260200,
+      "lba_start": 7542,
+      "lba_sectors": 128,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN1F.BIN;1",
+      "clean_path": "/DATA/SN3/SN1F.BIN",
+      "size_bytes": 153408,
+      "lba_start": 7670,
+      "lba_sectors": 75,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN20.BIN;1",
+      "clean_path": "/DATA/SN3/SN20.BIN",
+      "size_bytes": 81112,
+      "lba_start": 7745,
+      "lba_sectors": 40,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN21.BIN;1",
+      "clean_path": "/DATA/SN3/SN21.BIN",
+      "size_bytes": 108536,
+      "lba_start": 7785,
+      "lba_sectors": 53,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN22.BIN;1",
+      "clean_path": "/DATA/SN3/SN22.BIN",
+      "size_bytes": 161592,
+      "lba_start": 7838,
+      "lba_sectors": 79,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN23.BIN;1",
+      "clean_path": "/DATA/SN3/SN23.BIN",
+      "size_bytes": 191160,
+      "lba_start": 7917,
+      "lba_sectors": 94,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN24.BIN;1",
+      "clean_path": "/DATA/SN3/SN24.BIN",
+      "size_bytes": 178160,
+      "lba_start": 8011,
+      "lba_sectors": 87,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN25.BIN;1",
+      "clean_path": "/DATA/SN3/SN25.BIN",
+      "size_bytes": 125632,
+      "lba_start": 8098,
+      "lba_sectors": 62,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN26.BIN;1",
+      "clean_path": "/DATA/SN3/SN26.BIN",
+      "size_bytes": 233336,
+      "lba_start": 8160,
+      "lba_sectors": 114,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN27.BIN;1",
+      "clean_path": "/DATA/SN3/SN27.BIN",
+      "size_bytes": 139368,
+      "lba_start": 8274,
+      "lba_sectors": 69,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN28.BIN;1",
+      "clean_path": "/DATA/SN3/SN28.BIN",
+      "size_bytes": 174600,
+      "lba_start": 8343,
+      "lba_sectors": 86,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN29.BIN;1",
+      "clean_path": "/DATA/SN3/SN29.BIN",
+      "size_bytes": 160416,
+      "lba_start": 8429,
+      "lba_sectors": 79,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN2A.BIN;1",
+      "clean_path": "/DATA/SN3/SN2A.BIN",
+      "size_bytes": 215584,
+      "lba_start": 8508,
+      "lba_sectors": 106,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN2B.BIN;1",
+      "clean_path": "/DATA/SN3/SN2B.BIN",
+      "size_bytes": 340016,
+      "lba_start": 8614,
+      "lba_sectors": 167,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN2C.BIN;1",
+      "clean_path": "/DATA/SN3/SN2C.BIN",
+      "size_bytes": 102984,
+      "lba_start": 8781,
+      "lba_sectors": 51,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN2D.BIN;1",
+      "clean_path": "/DATA/SN3/SN2D.BIN",
+      "size_bytes": 274456,
+      "lba_start": 8832,
+      "lba_sectors": 135,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN3/SN2E.BIN;1",
+      "clean_path": "/DATA/SN3/SN2E.BIN",
+      "size_bytes": 46632,
+      "lba_start": 8967,
+      "lba_sectors": 23,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN00.BIN;1",
+      "clean_path": "/DATA/SN2/SN00.BIN",
+      "size_bytes": 232560,
+      "lba_start": 8990,
+      "lba_sectors": 114,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN01.BIN;1",
+      "clean_path": "/DATA/SN2/SN01.BIN",
+      "size_bytes": 327824,
+      "lba_start": 9104,
+      "lba_sectors": 161,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN02.BIN;1",
+      "clean_path": "/DATA/SN2/SN02.BIN",
+      "size_bytes": 244368,
+      "lba_start": 9265,
+      "lba_sectors": 120,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN03.BIN;1",
+      "clean_path": "/DATA/SN2/SN03.BIN",
+      "size_bytes": 243464,
+      "lba_start": 9385,
+      "lba_sectors": 119,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN04.BIN;1",
+      "clean_path": "/DATA/SN2/SN04.BIN",
+      "size_bytes": 164136,
+      "lba_start": 9504,
+      "lba_sectors": 81,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN05.BIN;1",
+      "clean_path": "/DATA/SN2/SN05.BIN",
+      "size_bytes": 428832,
+      "lba_start": 9585,
+      "lba_sectors": 210,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN06.BIN;1",
+      "clean_path": "/DATA/SN2/SN06.BIN",
+      "size_bytes": 278024,
+      "lba_start": 9795,
+      "lba_sectors": 136,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN07.BIN;1",
+      "clean_path": "/DATA/SN2/SN07.BIN",
+      "size_bytes": 252376,
+      "lba_start": 9931,
+      "lba_sectors": 124,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN08.BIN;1",
+      "clean_path": "/DATA/SN2/SN08.BIN",
+      "size_bytes": 271328,
+      "lba_start": 10055,
+      "lba_sectors": 133,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN09.BIN;1",
+      "clean_path": "/DATA/SN2/SN09.BIN",
+      "size_bytes": 284024,
+      "lba_start": 10188,
+      "lba_sectors": 139,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN0A.BIN;1",
+      "clean_path": "/DATA/SN2/SN0A.BIN",
+      "size_bytes": 255024,
+      "lba_start": 10327,
+      "lba_sectors": 125,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN0B.BIN;1",
+      "clean_path": "/DATA/SN2/SN0B.BIN",
+      "size_bytes": 267272,
+      "lba_start": 10452,
+      "lba_sectors": 131,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN12.BIN;1",
+      "clean_path": "/DATA/SN2/SN12.BIN",
+      "size_bytes": 104176,
+      "lba_start": 10583,
+      "lba_sectors": 51,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN13.BIN;1",
+      "clean_path": "/DATA/SN2/SN13.BIN",
+      "size_bytes": 273992,
+      "lba_start": 10634,
+      "lba_sectors": 134,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN14.BIN;1",
+      "clean_path": "/DATA/SN2/SN14.BIN",
+      "size_bytes": 166232,
+      "lba_start": 10768,
+      "lba_sectors": 82,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN15.BIN;1",
+      "clean_path": "/DATA/SN2/SN15.BIN",
+      "size_bytes": 160472,
+      "lba_start": 10850,
+      "lba_sectors": 79,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN16.BIN;1",
+      "clean_path": "/DATA/SN2/SN16.BIN",
+      "size_bytes": 121224,
+      "lba_start": 10929,
+      "lba_sectors": 60,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN17.BIN;1",
+      "clean_path": "/DATA/SN2/SN17.BIN",
+      "size_bytes": 112192,
+      "lba_start": 10989,
+      "lba_sectors": 55,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN18.BIN;1",
+      "clean_path": "/DATA/SN2/SN18.BIN",
+      "size_bytes": 106888,
+      "lba_start": 11044,
+      "lba_sectors": 53,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN2/SN19.BIN;1",
+      "clean_path": "/DATA/SN2/SN19.BIN",
+      "size_bytes": 164704,
+      "lba_start": 11097,
+      "lba_sectors": 81,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN1A.BIN;1",
+      "clean_path": "/DATA/SN1/SN1A.BIN",
+      "size_bytes": 246776,
+      "lba_start": 11178,
+      "lba_sectors": 121,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN1B.BIN;1",
+      "clean_path": "/DATA/SN1/SN1B.BIN",
+      "size_bytes": 163776,
+      "lba_start": 11299,
+      "lba_sectors": 80,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN1C.BIN;1",
+      "clean_path": "/DATA/SN1/SN1C.BIN",
+      "size_bytes": 133040,
+      "lba_start": 11379,
+      "lba_sectors": 65,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN1D.BIN;1",
+      "clean_path": "/DATA/SN1/SN1D.BIN",
+      "size_bytes": 96240,
+      "lba_start": 11444,
+      "lba_sectors": 47,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN1E.BIN;1",
+      "clean_path": "/DATA/SN1/SN1E.BIN",
+      "size_bytes": 199008,
+      "lba_start": 11491,
+      "lba_sectors": 98,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN1F.BIN;1",
+      "clean_path": "/DATA/SN1/SN1F.BIN",
+      "size_bytes": 134536,
+      "lba_start": 11589,
+      "lba_sectors": 66,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN20.BIN;1",
+      "clean_path": "/DATA/SN1/SN20.BIN",
+      "size_bytes": 69256,
+      "lba_start": 11655,
+      "lba_sectors": 34,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN21.BIN;1",
+      "clean_path": "/DATA/SN1/SN21.BIN",
+      "size_bytes": 86064,
+      "lba_start": 11689,
+      "lba_sectors": 43,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN22.BIN;1",
+      "clean_path": "/DATA/SN1/SN22.BIN",
+      "size_bytes": 131224,
+      "lba_start": 11732,
+      "lba_sectors": 65,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN23.BIN;1",
+      "clean_path": "/DATA/SN1/SN23.BIN",
+      "size_bytes": 154952,
+      "lba_start": 11797,
+      "lba_sectors": 76,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN24.BIN;1",
+      "clean_path": "/DATA/SN1/SN24.BIN",
+      "size_bytes": 148168,
+      "lba_start": 11873,
+      "lba_sectors": 73,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN25.BIN;1",
+      "clean_path": "/DATA/SN1/SN25.BIN",
+      "size_bytes": 103000,
+      "lba_start": 11946,
+      "lba_sectors": 51,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN26.BIN;1",
+      "clean_path": "/DATA/SN1/SN26.BIN",
+      "size_bytes": 181928,
+      "lba_start": 11997,
+      "lba_sectors": 89,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN27.BIN;1",
+      "clean_path": "/DATA/SN1/SN27.BIN",
+      "size_bytes": 113160,
+      "lba_start": 12086,
+      "lba_sectors": 56,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN28.BIN;1",
+      "clean_path": "/DATA/SN1/SN28.BIN",
+      "size_bytes": 131816,
+      "lba_start": 12142,
+      "lba_sectors": 65,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN29.BIN;1",
+      "clean_path": "/DATA/SN1/SN29.BIN",
+      "size_bytes": 130680,
+      "lba_start": 12207,
+      "lba_sectors": 64,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN2A.BIN;1",
+      "clean_path": "/DATA/SN1/SN2A.BIN",
+      "size_bytes": 180920,
+      "lba_start": 12271,
+      "lba_sectors": 89,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN2B.BIN;1",
+      "clean_path": "/DATA/SN1/SN2B.BIN",
+      "size_bytes": 269432,
+      "lba_start": 12360,
+      "lba_sectors": 132,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN2C.BIN;1",
+      "clean_path": "/DATA/SN1/SN2C.BIN",
+      "size_bytes": 82664,
+      "lba_start": 12492,
+      "lba_sectors": 41,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN2D.BIN;1",
+      "clean_path": "/DATA/SN1/SN2D.BIN",
+      "size_bytes": 215720,
+      "lba_start": 12533,
+      "lba_sectors": 106,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN1/SN2E.BIN;1",
+      "clean_path": "/DATA/SN1/SN2E.BIN",
+      "size_bytes": 40424,
+      "lba_start": 12639,
+      "lba_sectors": 20,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN00.BIN;1",
+      "clean_path": "/DATA/SN0/SN00.BIN",
+      "size_bytes": 179488,
+      "lba_start": 12659,
+      "lba_sectors": 88,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN01.BIN;1",
+      "clean_path": "/DATA/SN0/SN01.BIN",
+      "size_bytes": 256800,
+      "lba_start": 12747,
+      "lba_sectors": 126,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN02.BIN;1",
+      "clean_path": "/DATA/SN0/SN02.BIN",
+      "size_bytes": 200640,
+      "lba_start": 12873,
+      "lba_sectors": 98,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN03.BIN;1",
+      "clean_path": "/DATA/SN0/SN03.BIN",
+      "size_bytes": 195712,
+      "lba_start": 12971,
+      "lba_sectors": 96,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN04.BIN;1",
+      "clean_path": "/DATA/SN0/SN04.BIN",
+      "size_bytes": 126400,
+      "lba_start": 13067,
+      "lba_sectors": 62,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN05.BIN;1",
+      "clean_path": "/DATA/SN0/SN05.BIN",
+      "size_bytes": 338384,
+      "lba_start": 13129,
+      "lba_sectors": 166,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN06.BIN;1",
+      "clean_path": "/DATA/SN0/SN06.BIN",
+      "size_bytes": 213768,
+      "lba_start": 13295,
+      "lba_sectors": 105,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN07.BIN;1",
+      "clean_path": "/DATA/SN0/SN07.BIN",
+      "size_bytes": 198112,
+      "lba_start": 13400,
+      "lba_sectors": 97,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN08.BIN;1",
+      "clean_path": "/DATA/SN0/SN08.BIN",
+      "size_bytes": 214328,
+      "lba_start": 13497,
+      "lba_sectors": 105,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN09.BIN;1",
+      "clean_path": "/DATA/SN0/SN09.BIN",
+      "size_bytes": 227352,
+      "lba_start": 13602,
+      "lba_sectors": 112,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN0A.BIN;1",
+      "clean_path": "/DATA/SN0/SN0A.BIN",
+      "size_bytes": 202160,
+      "lba_start": 13714,
+      "lba_sectors": 99,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN0B.BIN;1",
+      "clean_path": "/DATA/SN0/SN0B.BIN",
+      "size_bytes": 222872,
+      "lba_start": 13813,
+      "lba_sectors": 109,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN12.BIN;1",
+      "clean_path": "/DATA/SN0/SN12.BIN",
+      "size_bytes": 69384,
+      "lba_start": 13922,
+      "lba_sectors": 34,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN13.BIN;1",
+      "clean_path": "/DATA/SN0/SN13.BIN",
+      "size_bytes": 208056,
+      "lba_start": 13956,
+      "lba_sectors": 102,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN14.BIN;1",
+      "clean_path": "/DATA/SN0/SN14.BIN",
+      "size_bytes": 130720,
+      "lba_start": 14058,
+      "lba_sectors": 64,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN15.BIN;1",
+      "clean_path": "/DATA/SN0/SN15.BIN",
+      "size_bytes": 140736,
+      "lba_start": 14122,
+      "lba_sectors": 69,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN16.BIN;1",
+      "clean_path": "/DATA/SN0/SN16.BIN",
+      "size_bytes": 108616,
+      "lba_start": 14191,
+      "lba_sectors": 54,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN17.BIN;1",
+      "clean_path": "/DATA/SN0/SN17.BIN",
+      "size_bytes": 85488,
+      "lba_start": 14245,
+      "lba_sectors": 42,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN18.BIN;1",
+      "clean_path": "/DATA/SN0/SN18.BIN",
+      "size_bytes": 86008,
+      "lba_start": 14287,
+      "lba_sectors": 42,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/SN0/SN19.BIN;1",
+      "clean_path": "/DATA/SN0/SN19.BIN",
+      "size_bytes": 132016,
+      "lba_start": 14329,
+      "lba_sectors": 65,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P15.BIN;1",
+      "clean_path": "/DATA/PL1/P15.BIN",
+      "size_bytes": 1260336,
+      "lba_start": 14394,
+      "lba_sectors": 616,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P16.BIN;1",
+      "clean_path": "/DATA/PL1/P16.BIN",
+      "size_bytes": 998784,
+      "lba_start": 15010,
+      "lba_sectors": 488,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P17.BIN;1",
+      "clean_path": "/DATA/PL1/P17.BIN",
+      "size_bytes": 850448,
+      "lba_start": 15498,
+      "lba_sectors": 416,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P18.BIN;1",
+      "clean_path": "/DATA/PL1/P18.BIN",
+      "size_bytes": 1377144,
+      "lba_start": 15914,
+      "lba_sectors": 673,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P19.BIN;1",
+      "clean_path": "/DATA/PL1/P19.BIN",
+      "size_bytes": 1137808,
+      "lba_start": 16587,
+      "lba_sectors": 556,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P1A.BIN;1",
+      "clean_path": "/DATA/PL1/P1A.BIN",
+      "size_bytes": 1541344,
+      "lba_start": 17143,
+      "lba_sectors": 753,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P1B.BIN;1",
+      "clean_path": "/DATA/PL1/P1B.BIN",
+      "size_bytes": 1290400,
+      "lba_start": 17896,
+      "lba_sectors": 631,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P1C.BIN;1",
+      "clean_path": "/DATA/PL1/P1C.BIN",
+      "size_bytes": 1627456,
+      "lba_start": 18527,
+      "lba_sectors": 795,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P1D.BIN;1",
+      "clean_path": "/DATA/PL1/P1D.BIN",
+      "size_bytes": 1461640,
+      "lba_start": 19322,
+      "lba_sectors": 714,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P1E.BIN;1",
+      "clean_path": "/DATA/PL1/P1E.BIN",
+      "size_bytes": 1307208,
+      "lba_start": 20036,
+      "lba_sectors": 639,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P1F.BIN;1",
+      "clean_path": "/DATA/PL1/P1F.BIN",
+      "size_bytes": 1680496,
+      "lba_start": 20675,
+      "lba_sectors": 821,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P20.BIN;1",
+      "clean_path": "/DATA/PL1/P20.BIN",
+      "size_bytes": 1746456,
+      "lba_start": 21496,
+      "lba_sectors": 853,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P21.BIN;1",
+      "clean_path": "/DATA/PL1/P21.BIN",
+      "size_bytes": 1078056,
+      "lba_start": 22349,
+      "lba_sectors": 527,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P22.BIN;1",
+      "clean_path": "/DATA/PL1/P22.BIN",
+      "size_bytes": 1266336,
+      "lba_start": 22876,
+      "lba_sectors": 619,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P23.BIN;1",
+      "clean_path": "/DATA/PL1/P23.BIN",
+      "size_bytes": 729544,
+      "lba_start": 23495,
+      "lba_sectors": 357,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P24.BIN;1",
+      "clean_path": "/DATA/PL1/P24.BIN",
+      "size_bytes": 1466248,
+      "lba_start": 23852,
+      "lba_sectors": 716,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P25.BIN;1",
+      "clean_path": "/DATA/PL1/P25.BIN",
+      "size_bytes": 1069880,
+      "lba_start": 24568,
+      "lba_sectors": 523,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P26.BIN;1",
+      "clean_path": "/DATA/PL1/P26.BIN",
+      "size_bytes": 1387360,
+      "lba_start": 25091,
+      "lba_sectors": 678,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P27.BIN;1",
+      "clean_path": "/DATA/PL1/P27.BIN",
+      "size_bytes": 1604064,
+      "lba_start": 25769,
+      "lba_sectors": 784,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P28.BIN;1",
+      "clean_path": "/DATA/PL1/P28.BIN",
+      "size_bytes": 998760,
+      "lba_start": 26553,
+      "lba_sectors": 488,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P2E.BIN;1",
+      "clean_path": "/DATA/PL1/P2E.BIN",
+      "size_bytes": 912672,
+      "lba_start": 27041,
+      "lba_sectors": 446,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P2F.BIN;1",
+      "clean_path": "/DATA/PL1/P2F.BIN",
+      "size_bytes": 611416,
+      "lba_start": 27487,
+      "lba_sectors": 299,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P30.BIN;1",
+      "clean_path": "/DATA/PL1/P30.BIN",
+      "size_bytes": 1038952,
+      "lba_start": 27786,
+      "lba_sectors": 508,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P31.BIN;1",
+      "clean_path": "/DATA/PL1/P31.BIN",
+      "size_bytes": 1431784,
+      "lba_start": 28294,
+      "lba_sectors": 700,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL1/P32.BIN;1",
+      "clean_path": "/DATA/PL1/P32.BIN",
+      "size_bytes": 1154152,
+      "lba_start": 28994,
+      "lba_sectors": 564,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P00.BIN;1",
+      "clean_path": "/DATA/PL0/P00.BIN",
+      "size_bytes": 1241024,
+      "lba_start": 29558,
+      "lba_sectors": 606,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P01.BIN;1",
+      "clean_path": "/DATA/PL0/P01.BIN",
+      "size_bytes": 835272,
+      "lba_start": 30164,
+      "lba_sectors": 408,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P02.BIN;1",
+      "clean_path": "/DATA/PL0/P02.BIN",
+      "size_bytes": 867016,
+      "lba_start": 30572,
+      "lba_sectors": 424,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P03.BIN;1",
+      "clean_path": "/DATA/PL0/P03.BIN",
+      "size_bytes": 1034776,
+      "lba_start": 30996,
+      "lba_sectors": 506,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P04.BIN;1",
+      "clean_path": "/DATA/PL0/P04.BIN",
+      "size_bytes": 999680,
+      "lba_start": 31502,
+      "lba_sectors": 489,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P05.BIN;1",
+      "clean_path": "/DATA/PL0/P05.BIN",
+      "size_bytes": 1052016,
+      "lba_start": 31991,
+      "lba_sectors": 514,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P06.BIN;1",
+      "clean_path": "/DATA/PL0/P06.BIN",
+      "size_bytes": 923768,
+      "lba_start": 32505,
+      "lba_sectors": 452,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P07.BIN;1",
+      "clean_path": "/DATA/PL0/P07.BIN",
+      "size_bytes": 1321840,
+      "lba_start": 32957,
+      "lba_sectors": 646,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P08.BIN;1",
+      "clean_path": "/DATA/PL0/P08.BIN",
+      "size_bytes": 756152,
+      "lba_start": 33603,
+      "lba_sectors": 370,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P09.BIN;1",
+      "clean_path": "/DATA/PL0/P09.BIN",
+      "size_bytes": 1217576,
+      "lba_start": 33973,
+      "lba_sectors": 595,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P0A.BIN;1",
+      "clean_path": "/DATA/PL0/P0A.BIN",
+      "size_bytes": 1070376,
+      "lba_start": 34568,
+      "lba_sectors": 523,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P0B.BIN;1",
+      "clean_path": "/DATA/PL0/P0B.BIN",
+      "size_bytes": 943744,
+      "lba_start": 35091,
+      "lba_sectors": 461,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P0C.BIN;1",
+      "clean_path": "/DATA/PL0/P0C.BIN",
+      "size_bytes": 1223544,
+      "lba_start": 35552,
+      "lba_sectors": 598,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P0D.BIN;1",
+      "clean_path": "/DATA/PL0/P0D.BIN",
+      "size_bytes": 960384,
+      "lba_start": 36150,
+      "lba_sectors": 469,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P0E.BIN;1",
+      "clean_path": "/DATA/PL0/P0E.BIN",
+      "size_bytes": 956776,
+      "lba_start": 36619,
+      "lba_sectors": 468,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P0F.BIN;1",
+      "clean_path": "/DATA/PL0/P0F.BIN",
+      "size_bytes": 827080,
+      "lba_start": 37087,
+      "lba_sectors": 404,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P10.BIN;1",
+      "clean_path": "/DATA/PL0/P10.BIN",
+      "size_bytes": 853040,
+      "lba_start": 37491,
+      "lba_sectors": 417,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P11.BIN;1",
+      "clean_path": "/DATA/PL0/P11.BIN",
+      "size_bytes": 977720,
+      "lba_start": 37908,
+      "lba_sectors": 478,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P12.BIN;1",
+      "clean_path": "/DATA/PL0/P12.BIN",
+      "size_bytes": 1279048,
+      "lba_start": 38386,
+      "lba_sectors": 625,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P13.BIN;1",
+      "clean_path": "/DATA/PL0/P13.BIN",
+      "size_bytes": 891520,
+      "lba_start": 39011,
+      "lba_sectors": 436,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/PL0/P14.BIN;1",
+      "clean_path": "/DATA/PL0/P14.BIN",
+      "size_bytes": 1690136,
+      "lba_start": 39447,
+      "lba_sectors": 826,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/ICON.SYS;1",
+      "clean_path": "/DATA/MC/ICON.SYS",
+      "size_bytes": 964,
+      "lba_start": 40273,
+      "lba_sectors": 1,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/MC/KOF2002.ICO;1",
+      "clean_path": "/DATA/MC/KOF2002.ICO",
+      "size_bytes": 52984,
+      "lba_start": 40274,
+      "lba_sectors": 26,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC00.DAT;1",
+      "clean_path": "/DATA/MC/MC00.DAT",
+      "size_bytes": 323584,
+      "lba_start": 40300,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC01.DAT;1",
+      "clean_path": "/DATA/MC/MC01.DAT",
+      "size_bytes": 323584,
+      "lba_start": 40458,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC02.DAT;1",
+      "clean_path": "/DATA/MC/MC02.DAT",
+      "size_bytes": 323584,
+      "lba_start": 40616,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC03.DAT;1",
+      "clean_path": "/DATA/MC/MC03.DAT",
+      "size_bytes": 323584,
+      "lba_start": 40774,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC04.DAT;1",
+      "clean_path": "/DATA/MC/MC04.DAT",
+      "size_bytes": 323584,
+      "lba_start": 40932,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC05.DAT;1",
+      "clean_path": "/DATA/MC/MC05.DAT",
+      "size_bytes": 323584,
+      "lba_start": 41090,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC06.DAT;1",
+      "clean_path": "/DATA/MC/MC06.DAT",
+      "size_bytes": 323584,
+      "lba_start": 41248,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC07.DAT;1",
+      "clean_path": "/DATA/MC/MC07.DAT",
+      "size_bytes": 323584,
+      "lba_start": 41406,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC08.DAT;1",
+      "clean_path": "/DATA/MC/MC08.DAT",
+      "size_bytes": 323584,
+      "lba_start": 41564,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC09.DAT;1",
+      "clean_path": "/DATA/MC/MC09.DAT",
+      "size_bytes": 323584,
+      "lba_start": 41722,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC0A.DAT;1",
+      "clean_path": "/DATA/MC/MC0A.DAT",
+      "size_bytes": 323584,
+      "lba_start": 41880,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC0B.DAT;1",
+      "clean_path": "/DATA/MC/MC0B.DAT",
+      "size_bytes": 323584,
+      "lba_start": 42038,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC0C.DAT;1",
+      "clean_path": "/DATA/MC/MC0C.DAT",
+      "size_bytes": 323584,
+      "lba_start": 42196,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC0D.DAT;1",
+      "clean_path": "/DATA/MC/MC0D.DAT",
+      "size_bytes": 323584,
+      "lba_start": 42354,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC0E.DAT;1",
+      "clean_path": "/DATA/MC/MC0E.DAT",
+      "size_bytes": 323584,
+      "lba_start": 42512,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC0F.DAT;1",
+      "clean_path": "/DATA/MC/MC0F.DAT",
+      "size_bytes": 323584,
+      "lba_start": 42670,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC10.DAT;1",
+      "clean_path": "/DATA/MC/MC10.DAT",
+      "size_bytes": 323584,
+      "lba_start": 42828,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC11.DAT;1",
+      "clean_path": "/DATA/MC/MC11.DAT",
+      "size_bytes": 323584,
+      "lba_start": 42986,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC12.DAT;1",
+      "clean_path": "/DATA/MC/MC12.DAT",
+      "size_bytes": 323584,
+      "lba_start": 43144,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC13.DAT;1",
+      "clean_path": "/DATA/MC/MC13.DAT",
+      "size_bytes": 323584,
+      "lba_start": 43302,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC14.DAT;1",
+      "clean_path": "/DATA/MC/MC14.DAT",
+      "size_bytes": 323584,
+      "lba_start": 43460,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC15.DAT;1",
+      "clean_path": "/DATA/MC/MC15.DAT",
+      "size_bytes": 323584,
+      "lba_start": 43618,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC16.DAT;1",
+      "clean_path": "/DATA/MC/MC16.DAT",
+      "size_bytes": 323584,
+      "lba_start": 43776,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/MC/MC17.DAT;1",
+      "clean_path": "/DATA/MC/MC17.DAT",
+      "size_bytes": 323584,
+      "lba_start": 43934,
+      "lba_sectors": 158,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/LOGO/CRI.RAW;1",
+      "clean_path": "/DATA/LOGO/CRI.RAW",
+      "size_bytes": 983040,
+      "lba_start": 44092,
+      "lba_sectors": 480,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/LOGO/KOF50.RAW;1",
+      "clean_path": "/DATA/LOGO/KOF50.RAW",
+      "size_bytes": 983040,
+      "lba_start": 44572,
+      "lba_sectors": 480,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/LOGO/KOF60.RAW;1",
+      "clean_path": "/DATA/LOGO/KOF60.RAW",
+      "size_bytes": 983040,
+      "lba_start": 45052,
+      "lba_sectors": 480,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/LOGO/KOF60T.RAW;1",
+      "clean_path": "/DATA/LOGO/KOF60T.RAW",
+      "size_bytes": 983040,
+      "lba_start": 45532,
+      "lba_sectors": 480,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/LOGO/KOFTEST6.RAW;1",
+      "clean_path": "/DATA/LOGO/KOFTEST6.RAW",
+      "size_bytes": 921600,
+      "lba_start": 46012,
+      "lba_sectors": 450,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/LOGO/LOGO00.DAT;1",
+      "clean_path": "/DATA/LOGO/LOGO00.DAT",
+      "size_bytes": 1310720,
+      "lba_start": 46462,
+      "lba_sectors": 640,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/LOGO/LOGO01.DAT;1",
+      "clean_path": "/DATA/LOGO/LOGO01.DAT",
+      "size_bytes": 1310720,
+      "lba_start": 47102,
+      "lba_sectors": 640,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/LOGO/LOGO02.DAT;1",
+      "clean_path": "/DATA/LOGO/LOGO02.DAT",
+      "size_bytes": 1310720,
+      "lba_start": 47742,
+      "lba_sectors": 640,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/LOGO/SNK.RAW;1",
+      "clean_path": "/DATA/LOGO/SNK.RAW",
+      "size_bytes": 983040,
+      "lba_start": 48382,
+      "lba_sectors": 480,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P15.BIN;1",
+      "clean_path": "/DATA/EPL3/P15.BIN",
+      "size_bytes": 92672,
+      "lba_start": 48862,
+      "lba_sectors": 46,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P16.BIN;1",
+      "clean_path": "/DATA/EPL3/P16.BIN",
+      "size_bytes": 86040,
+      "lba_start": 48908,
+      "lba_sectors": 43,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P17.BIN;1",
+      "clean_path": "/DATA/EPL3/P17.BIN",
+      "size_bytes": 80096,
+      "lba_start": 48951,
+      "lba_sectors": 40,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P18.BIN;1",
+      "clean_path": "/DATA/EPL3/P18.BIN",
+      "size_bytes": 90184,
+      "lba_start": 48991,
+      "lba_sectors": 45,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P19.BIN;1",
+      "clean_path": "/DATA/EPL3/P19.BIN",
+      "size_bytes": 86752,
+      "lba_start": 49036,
+      "lba_sectors": 43,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P1A.BIN;1",
+      "clean_path": "/DATA/EPL3/P1A.BIN",
+      "size_bytes": 129864,
+      "lba_start": 49079,
+      "lba_sectors": 64,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P1B.BIN;1",
+      "clean_path": "/DATA/EPL3/P1B.BIN",
+      "size_bytes": 144736,
+      "lba_start": 49143,
+      "lba_sectors": 71,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P1C.BIN;1",
+      "clean_path": "/DATA/EPL3/P1C.BIN",
+      "size_bytes": 111968,
+      "lba_start": 49214,
+      "lba_sectors": 55,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P1D.BIN;1",
+      "clean_path": "/DATA/EPL3/P1D.BIN",
+      "size_bytes": 161448,
+      "lba_start": 49269,
+      "lba_sectors": 79,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P1E.BIN;1",
+      "clean_path": "/DATA/EPL3/P1E.BIN",
+      "size_bytes": 117640,
+      "lba_start": 49348,
+      "lba_sectors": 58,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P1F.BIN;1",
+      "clean_path": "/DATA/EPL3/P1F.BIN",
+      "size_bytes": 124952,
+      "lba_start": 49406,
+      "lba_sectors": 62,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P20.BIN;1",
+      "clean_path": "/DATA/EPL3/P20.BIN",
+      "size_bytes": 114696,
+      "lba_start": 49468,
+      "lba_sectors": 57,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P21.BIN;1",
+      "clean_path": "/DATA/EPL3/P21.BIN",
+      "size_bytes": 88512,
+      "lba_start": 49525,
+      "lba_sectors": 44,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P22.BIN;1",
+      "clean_path": "/DATA/EPL3/P22.BIN",
+      "size_bytes": 114032,
+      "lba_start": 49569,
+      "lba_sectors": 56,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P23.BIN;1",
+      "clean_path": "/DATA/EPL3/P23.BIN",
+      "size_bytes": 92408,
+      "lba_start": 49625,
+      "lba_sectors": 46,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P24.BIN;1",
+      "clean_path": "/DATA/EPL3/P24.BIN",
+      "size_bytes": 111976,
+      "lba_start": 49671,
+      "lba_sectors": 55,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P25.BIN;1",
+      "clean_path": "/DATA/EPL3/P25.BIN",
+      "size_bytes": 85040,
+      "lba_start": 49726,
+      "lba_sectors": 42,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P26.BIN;1",
+      "clean_path": "/DATA/EPL3/P26.BIN",
+      "size_bytes": 112384,
+      "lba_start": 49768,
+      "lba_sectors": 55,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P27.BIN;1",
+      "clean_path": "/DATA/EPL3/P27.BIN",
+      "size_bytes": 92920,
+      "lba_start": 49823,
+      "lba_sectors": 46,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P28.BIN;1",
+      "clean_path": "/DATA/EPL3/P28.BIN",
+      "size_bytes": 102312,
+      "lba_start": 49869,
+      "lba_sectors": 50,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P2E.BIN;1",
+      "clean_path": "/DATA/EPL3/P2E.BIN",
+      "size_bytes": 11240,
+      "lba_start": 49919,
+      "lba_sectors": 6,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P2F.BIN;1",
+      "clean_path": "/DATA/EPL3/P2F.BIN",
+      "size_bytes": 10512,
+      "lba_start": 49925,
+      "lba_sectors": 6,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P30.BIN;1",
+      "clean_path": "/DATA/EPL3/P30.BIN",
+      "size_bytes": 102400,
+      "lba_start": 49931,
+      "lba_sectors": 50,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P31.BIN;1",
+      "clean_path": "/DATA/EPL3/P31.BIN",
+      "size_bytes": 89776,
+      "lba_start": 49981,
+      "lba_sectors": 44,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL3/P32.BIN;1",
+      "clean_path": "/DATA/EPL3/P32.BIN",
+      "size_bytes": 99320,
+      "lba_start": 50025,
+      "lba_sectors": 49,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P00.BIN;1",
+      "clean_path": "/DATA/EPL2/P00.BIN",
+      "size_bytes": 101144,
+      "lba_start": 50074,
+      "lba_sectors": 50,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P01.BIN;1",
+      "clean_path": "/DATA/EPL2/P01.BIN",
+      "size_bytes": 88000,
+      "lba_start": 50124,
+      "lba_sectors": 43,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P02.BIN;1",
+      "clean_path": "/DATA/EPL2/P02.BIN",
+      "size_bytes": 99248,
+      "lba_start": 50167,
+      "lba_sectors": 49,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P03.BIN;1",
+      "clean_path": "/DATA/EPL2/P03.BIN",
+      "size_bytes": 100432,
+      "lba_start": 50216,
+      "lba_sectors": 50,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P04.BIN;1",
+      "clean_path": "/DATA/EPL2/P04.BIN",
+      "size_bytes": 98088,
+      "lba_start": 50266,
+      "lba_sectors": 48,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P05.BIN;1",
+      "clean_path": "/DATA/EPL2/P05.BIN",
+      "size_bytes": 105152,
+      "lba_start": 50314,
+      "lba_sectors": 52,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P06.BIN;1",
+      "clean_path": "/DATA/EPL2/P06.BIN",
+      "size_bytes": 109744,
+      "lba_start": 50366,
+      "lba_sectors": 54,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P07.BIN;1",
+      "clean_path": "/DATA/EPL2/P07.BIN",
+      "size_bytes": 158872,
+      "lba_start": 50420,
+      "lba_sectors": 78,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P08.BIN;1",
+      "clean_path": "/DATA/EPL2/P08.BIN",
+      "size_bytes": 78184,
+      "lba_start": 50498,
+      "lba_sectors": 39,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P09.BIN;1",
+      "clean_path": "/DATA/EPL2/P09.BIN",
+      "size_bytes": 91904,
+      "lba_start": 50537,
+      "lba_sectors": 45,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P0A.BIN;1",
+      "clean_path": "/DATA/EPL2/P0A.BIN",
+      "size_bytes": 117976,
+      "lba_start": 50582,
+      "lba_sectors": 58,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P0B.BIN;1",
+      "clean_path": "/DATA/EPL2/P0B.BIN",
+      "size_bytes": 99128,
+      "lba_start": 50640,
+      "lba_sectors": 49,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P0C.BIN;1",
+      "clean_path": "/DATA/EPL2/P0C.BIN",
+      "size_bytes": 86352,
+      "lba_start": 50689,
+      "lba_sectors": 43,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P0D.BIN;1",
+      "clean_path": "/DATA/EPL2/P0D.BIN",
+      "size_bytes": 98032,
+      "lba_start": 50732,
+      "lba_sectors": 48,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P0E.BIN;1",
+      "clean_path": "/DATA/EPL2/P0E.BIN",
+      "size_bytes": 98664,
+      "lba_start": 50780,
+      "lba_sectors": 49,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P0F.BIN;1",
+      "clean_path": "/DATA/EPL2/P0F.BIN",
+      "size_bytes": 79392,
+      "lba_start": 50829,
+      "lba_sectors": 39,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P10.BIN;1",
+      "clean_path": "/DATA/EPL2/P10.BIN",
+      "size_bytes": 96120,
+      "lba_start": 50868,
+      "lba_sectors": 47,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P11.BIN;1",
+      "clean_path": "/DATA/EPL2/P11.BIN",
+      "size_bytes": 85096,
+      "lba_start": 50915,
+      "lba_sectors": 42,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P12.BIN;1",
+      "clean_path": "/DATA/EPL2/P12.BIN",
+      "size_bytes": 92624,
+      "lba_start": 50957,
+      "lba_sectors": 46,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P13.BIN;1",
+      "clean_path": "/DATA/EPL2/P13.BIN",
+      "size_bytes": 77760,
+      "lba_start": 51003,
+      "lba_sectors": 38,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL2/P14.BIN;1",
+      "clean_path": "/DATA/EPL2/P14.BIN",
+      "size_bytes": 89640,
+      "lba_start": 51041,
+      "lba_sectors": 44,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P15.BIN;1",
+      "clean_path": "/DATA/EPL1/P15.BIN",
+      "size_bytes": 72528,
+      "lba_start": 51085,
+      "lba_sectors": 36,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P16.BIN;1",
+      "clean_path": "/DATA/EPL1/P16.BIN",
+      "size_bytes": 64808,
+      "lba_start": 51121,
+      "lba_sectors": 32,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P17.BIN;1",
+      "clean_path": "/DATA/EPL1/P17.BIN",
+      "size_bytes": 60040,
+      "lba_start": 51153,
+      "lba_sectors": 30,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P18.BIN;1",
+      "clean_path": "/DATA/EPL1/P18.BIN",
+      "size_bytes": 80384,
+      "lba_start": 51183,
+      "lba_sectors": 40,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P19.BIN;1",
+      "clean_path": "/DATA/EPL1/P19.BIN",
+      "size_bytes": 68952,
+      "lba_start": 51223,
+      "lba_sectors": 34,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P1A.BIN;1",
+      "clean_path": "/DATA/EPL1/P1A.BIN",
+      "size_bytes": 97336,
+      "lba_start": 51257,
+      "lba_sectors": 48,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P1B.BIN;1",
+      "clean_path": "/DATA/EPL1/P1B.BIN",
+      "size_bytes": 113144,
+      "lba_start": 51305,
+      "lba_sectors": 56,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P1C.BIN;1",
+      "clean_path": "/DATA/EPL1/P1C.BIN",
+      "size_bytes": 85296,
+      "lba_start": 51361,
+      "lba_sectors": 42,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P1D.BIN;1",
+      "clean_path": "/DATA/EPL1/P1D.BIN",
+      "size_bytes": 120840,
+      "lba_start": 51403,
+      "lba_sectors": 60,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P1E.BIN;1",
+      "clean_path": "/DATA/EPL1/P1E.BIN",
+      "size_bytes": 101032,
+      "lba_start": 51463,
+      "lba_sectors": 50,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P1F.BIN;1",
+      "clean_path": "/DATA/EPL1/P1F.BIN",
+      "size_bytes": 110664,
+      "lba_start": 51513,
+      "lba_sectors": 55,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P20.BIN;1",
+      "clean_path": "/DATA/EPL1/P20.BIN",
+      "size_bytes": 88216,
+      "lba_start": 51568,
+      "lba_sectors": 44,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P21.BIN;1",
+      "clean_path": "/DATA/EPL1/P21.BIN",
+      "size_bytes": 72576,
+      "lba_start": 51612,
+      "lba_sectors": 36,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P22.BIN;1",
+      "clean_path": "/DATA/EPL1/P22.BIN",
+      "size_bytes": 89800,
+      "lba_start": 51648,
+      "lba_sectors": 44,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P23.BIN;1",
+      "clean_path": "/DATA/EPL1/P23.BIN",
+      "size_bytes": 70704,
+      "lba_start": 51692,
+      "lba_sectors": 35,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P24.BIN;1",
+      "clean_path": "/DATA/EPL1/P24.BIN",
+      "size_bytes": 86960,
+      "lba_start": 51727,
+      "lba_sectors": 43,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P25.BIN;1",
+      "clean_path": "/DATA/EPL1/P25.BIN",
+      "size_bytes": 64392,
+      "lba_start": 51770,
+      "lba_sectors": 32,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P26.BIN;1",
+      "clean_path": "/DATA/EPL1/P26.BIN",
+      "size_bytes": 85560,
+      "lba_start": 51802,
+      "lba_sectors": 42,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P27.BIN;1",
+      "clean_path": "/DATA/EPL1/P27.BIN",
+      "size_bytes": 74160,
+      "lba_start": 51844,
+      "lba_sectors": 37,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P28.BIN;1",
+      "clean_path": "/DATA/EPL1/P28.BIN",
+      "size_bytes": 83296,
+      "lba_start": 51881,
+      "lba_sectors": 41,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P2E.BIN;1",
+      "clean_path": "/DATA/EPL1/P2E.BIN",
+      "size_bytes": 11192,
+      "lba_start": 51922,
+      "lba_sectors": 6,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P2F.BIN;1",
+      "clean_path": "/DATA/EPL1/P2F.BIN",
+      "size_bytes": 10392,
+      "lba_start": 51928,
+      "lba_sectors": 6,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P30.BIN;1",
+      "clean_path": "/DATA/EPL1/P30.BIN",
+      "size_bytes": 80000,
+      "lba_start": 51934,
+      "lba_sectors": 40,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P31.BIN;1",
+      "clean_path": "/DATA/EPL1/P31.BIN",
+      "size_bytes": 72784,
+      "lba_start": 51974,
+      "lba_sectors": 36,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL1/P32.BIN;1",
+      "clean_path": "/DATA/EPL1/P32.BIN",
+      "size_bytes": 78592,
+      "lba_start": 52010,
+      "lba_sectors": 39,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P00.BIN;1",
+      "clean_path": "/DATA/EPL0/P00.BIN",
+      "size_bytes": 83312,
+      "lba_start": 52049,
+      "lba_sectors": 41,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P01.BIN;1",
+      "clean_path": "/DATA/EPL0/P01.BIN",
+      "size_bytes": 67432,
+      "lba_start": 52090,
+      "lba_sectors": 33,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P02.BIN;1",
+      "clean_path": "/DATA/EPL0/P02.BIN",
+      "size_bytes": 76808,
+      "lba_start": 52123,
+      "lba_sectors": 38,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P03.BIN;1",
+      "clean_path": "/DATA/EPL0/P03.BIN",
+      "size_bytes": 74256,
+      "lba_start": 52161,
+      "lba_sectors": 37,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P04.BIN;1",
+      "clean_path": "/DATA/EPL0/P04.BIN",
+      "size_bytes": 76160,
+      "lba_start": 52198,
+      "lba_sectors": 38,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P05.BIN;1",
+      "clean_path": "/DATA/EPL0/P05.BIN",
+      "size_bytes": 77664,
+      "lba_start": 52236,
+      "lba_sectors": 38,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P06.BIN;1",
+      "clean_path": "/DATA/EPL0/P06.BIN",
+      "size_bytes": 80760,
+      "lba_start": 52274,
+      "lba_sectors": 40,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P07.BIN;1",
+      "clean_path": "/DATA/EPL0/P07.BIN",
+      "size_bytes": 131832,
+      "lba_start": 52314,
+      "lba_sectors": 65,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P08.BIN;1",
+      "clean_path": "/DATA/EPL0/P08.BIN",
+      "size_bytes": 60448,
+      "lba_start": 52379,
+      "lba_sectors": 30,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P09.BIN;1",
+      "clean_path": "/DATA/EPL0/P09.BIN",
+      "size_bytes": 70144,
+      "lba_start": 52409,
+      "lba_sectors": 35,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P0A.BIN;1",
+      "clean_path": "/DATA/EPL0/P0A.BIN",
+      "size_bytes": 91632,
+      "lba_start": 52444,
+      "lba_sectors": 45,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P0B.BIN;1",
+      "clean_path": "/DATA/EPL0/P0B.BIN",
+      "size_bytes": 85712,
+      "lba_start": 52489,
+      "lba_sectors": 42,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P0C.BIN;1",
+      "clean_path": "/DATA/EPL0/P0C.BIN",
+      "size_bytes": 65472,
+      "lba_start": 52531,
+      "lba_sectors": 32,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P0D.BIN;1",
+      "clean_path": "/DATA/EPL0/P0D.BIN",
+      "size_bytes": 76384,
+      "lba_start": 52563,
+      "lba_sectors": 38,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P0E.BIN;1",
+      "clean_path": "/DATA/EPL0/P0E.BIN",
+      "size_bytes": 76096,
+      "lba_start": 52601,
+      "lba_sectors": 38,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P0F.BIN;1",
+      "clean_path": "/DATA/EPL0/P0F.BIN",
+      "size_bytes": 61016,
+      "lba_start": 52639,
+      "lba_sectors": 30,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P10.BIN;1",
+      "clean_path": "/DATA/EPL0/P10.BIN",
+      "size_bytes": 75776,
+      "lba_start": 52669,
+      "lba_sectors": 37,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P11.BIN;1",
+      "clean_path": "/DATA/EPL0/P11.BIN",
+      "size_bytes": 65432,
+      "lba_start": 52706,
+      "lba_sectors": 32,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P12.BIN;1",
+      "clean_path": "/DATA/EPL0/P12.BIN",
+      "size_bytes": 67936,
+      "lba_start": 52738,
+      "lba_sectors": 34,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P13.BIN;1",
+      "clean_path": "/DATA/EPL0/P13.BIN",
+      "size_bytes": 58760,
+      "lba_start": 52772,
+      "lba_sectors": 29,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/EPL0/P14.BIN;1",
+      "clean_path": "/DATA/EPL0/P14.BIN",
+      "size_bytes": 68696,
+      "lba_start": 52801,
+      "lba_sectors": 34,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGA0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGA0.BIN",
+      "size_bytes": 1009632,
+      "lba_start": 52835,
+      "lba_sectors": 493,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGA1.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGA1.BIN",
+      "size_bytes": 1073024,
+      "lba_start": 53328,
+      "lba_sectors": 524,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGA2.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGA2.BIN",
+      "size_bytes": 1049680,
+      "lba_start": 53852,
+      "lba_sectors": 513,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGB0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGB0.BIN",
+      "size_bytes": 2502176,
+      "lba_start": 54365,
+      "lba_sectors": 1222,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGB1.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGB1.BIN",
+      "size_bytes": 2350480,
+      "lba_start": 55587,
+      "lba_sectors": 1148,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGB2.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGB2.BIN",
+      "size_bytes": 2436256,
+      "lba_start": 56735,
+      "lba_sectors": 1190,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGC0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGC0.BIN",
+      "size_bytes": 1340048,
+      "lba_start": 57925,
+      "lba_sectors": 655,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGC1.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGC1.BIN",
+      "size_bytes": 1342704,
+      "lba_start": 58580,
+      "lba_sectors": 656,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGC2.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGC2.BIN",
+      "size_bytes": 1361296,
+      "lba_start": 59236,
+      "lba_sectors": 665,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGC3.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGC3.BIN",
+      "size_bytes": 1395984,
+      "lba_start": 59901,
+      "lba_sectors": 682,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGD0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGD0.BIN",
+      "size_bytes": 1278048,
+      "lba_start": 60583,
+      "lba_sectors": 625,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGD1.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGD1.BIN",
+      "size_bytes": 695232,
+      "lba_start": 61208,
+      "lba_sectors": 340,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGD2.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGD2.BIN",
+      "size_bytes": 786496,
+      "lba_start": 61548,
+      "lba_sectors": 385,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGE0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGE0.BIN",
+      "size_bytes": 1539008,
+      "lba_start": 61933,
+      "lba_sectors": 752,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGF0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGF0.BIN",
+      "size_bytes": 1166368,
+      "lba_start": 62685,
+      "lba_sectors": 570,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGF1.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGF1.BIN",
+      "size_bytes": 1020992,
+      "lba_start": 63255,
+      "lba_sectors": 499,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGF2.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGF2.BIN",
+      "size_bytes": 1202480,
+      "lba_start": 63754,
+      "lba_sectors": 588,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGG0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGG0.BIN",
+      "size_bytes": 2291248,
+      "lba_start": 64342,
+      "lba_sectors": 1119,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGG1.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGG1.BIN",
+      "size_bytes": 2424288,
+      "lba_start": 65461,
+      "lba_sectors": 1184,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGG2.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGG2.BIN",
+      "size_bytes": 2424288,
+      "lba_start": 66645,
+      "lba_sectors": 1184,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGG3.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGG3.BIN",
+      "size_bytes": 2424256,
+      "lba_start": 67829,
+      "lba_sectors": 1184,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGH0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGH0.BIN",
+      "size_bytes": 1304544,
+      "lba_start": 69013,
+      "lba_sectors": 637,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG_BIN/BGI0.BIN;1",
+      "clean_path": "/DATA/BG_BIN/BGI0.BIN",
+      "size_bytes": 2685920,
+      "lba_start": 69650,
+      "lba_sectors": 1312,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BG/BG00.GRC;1",
+      "clean_path": "/DATA/BG/BG00.GRC",
+      "size_bytes": 193602,
+      "lba_start": 70962,
+      "lba_sectors": 95,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/BG/BG01.GRC;1",
+      "clean_path": "/DATA/BG/BG01.GRC",
+      "size_bytes": 319915,
+      "lba_start": 71057,
+      "lba_sectors": 157,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/BG/BG02.GRC;1",
+      "clean_path": "/DATA/BG/BG02.GRC",
+      "size_bytes": 395593,
+      "lba_start": 71214,
+      "lba_sectors": 194,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/BG/BG03.GRC;1",
+      "clean_path": "/DATA/BG/BG03.GRC",
+      "size_bytes": 375397,
+      "lba_start": 71408,
+      "lba_sectors": 184,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/BG/BG04.GRC;1",
+      "clean_path": "/DATA/BG/BG04.GRC",
+      "size_bytes": 192943,
+      "lba_start": 71592,
+      "lba_sectors": 95,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/BG/BG05.GRC;1",
+      "clean_path": "/DATA/BG/BG05.GRC",
+      "size_bytes": 191601,
+      "lba_start": 71687,
+      "lba_sectors": 94,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/BG/BG06.GRC;1",
+      "clean_path": "/DATA/BG/BG06.GRC",
+      "size_bytes": 407556,
+      "lba_start": 71781,
+      "lba_sectors": 200,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/BG/BG07.GRC;1",
+      "clean_path": "/DATA/BG/BG07.GRC",
+      "size_bytes": 303494,
+      "lba_start": 71981,
+      "lba_sectors": 149,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/BG/BG08.GRC;1",
+      "clean_path": "/DATA/BG/BG08.GRC",
+      "size_bytes": 164009,
+      "lba_start": 72130,
+      "lba_sectors": 81,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/BG/BG09.GRC;1",
+      "clean_path": "/DATA/BG/BG09.GRC",
+      "size_bytes": 306536,
+      "lba_start": 72211,
+      "lba_sectors": 150,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/BG/BG0A.GRC;1",
+      "clean_path": "/DATA/BG/BG0A.GRC",
+      "size_bytes": 73337,
+      "lba_start": 72361,
+      "lba_sectors": 36,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/BG/BG0B.GRC;1",
+      "clean_path": "/DATA/BG/BG0B.GRC",
+      "size_bytes": 345708,
+      "lba_start": 72397,
+      "lba_sectors": 169,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/BG/NEW_MESS.GRC;1",
+      "clean_path": "/DATA/BG/NEW_MESS.GRC",
+      "size_bytes": 95368,
+      "lba_start": 72566,
+      "lba_sectors": 47,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/BASE/BOSS.BIN;1",
+      "clean_path": "/DATA/BASE/BOSS.BIN",
+      "size_bytes": 330728,
+      "lba_start": 72613,
+      "lba_sectors": 162,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/BOSSB.BIN;1",
+      "clean_path": "/DATA/BASE/BOSSB.BIN",
+      "size_bytes": 504040,
+      "lba_start": 72775,
+      "lba_sectors": 247,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/ENDXX.GRC;1",
+      "clean_path": "/DATA/BASE/ENDXX.GRC",
+      "size_bytes": 1425118,
+      "lba_start": 73022,
+      "lba_sectors": 696,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/BASE/ENDXXB.GRC;1",
+      "clean_path": "/DATA/BASE/ENDXXB.GRC",
+      "size_bytes": 2107056,
+      "lba_start": 73718,
+      "lba_sectors": 1029,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/BASE/FIRST.GRC;1",
+      "clean_path": "/DATA/BASE/FIRST.GRC",
+      "size_bytes": 2147502,
+      "lba_start": 74747,
+      "lba_sectors": 1049,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/BASE/GAME.BIN;1",
+      "clean_path": "/DATA/BASE/GAME.BIN",
+      "size_bytes": 2453584,
+      "lba_start": 75796,
+      "lba_sectors": 1199,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/OSEL.BIN;1",
+      "clean_path": "/DATA/BASE/OSEL.BIN",
+      "size_bytes": 3193512,
+      "lba_start": 76995,
+      "lba_sectors": 1560,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/OSELB.BIN;1",
+      "clean_path": "/DATA/BASE/OSELB.BIN",
+      "size_bytes": 3969120,
+      "lba_start": 78555,
+      "lba_sectors": 1939,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/PSEL.BIN;1",
+      "clean_path": "/DATA/BASE/PSEL.BIN",
+      "size_bytes": 715592,
+      "lba_start": 80494,
+      "lba_sectors": 350,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/PSELB.BIN;1",
+      "clean_path": "/DATA/BASE/PSELB.BIN",
+      "size_bytes": 735824,
+      "lba_start": 80844,
+      "lba_sectors": 360,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/TITLE.BIN;1",
+      "clean_path": "/DATA/BASE/TITLE.BIN",
+      "size_bytes": 2682592,
+      "lba_start": 81204,
+      "lba_sectors": 1310,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/TITLEB.BIN;1",
+      "clean_path": "/DATA/BASE/TITLEB.BIN",
+      "size_bytes": 3053216,
+      "lba_start": 82514,
+      "lba_sectors": 1491,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/WDEMO.BIN;1",
+      "clean_path": "/DATA/BASE/WDEMO.BIN",
+      "size_bytes": 1162360,
+      "lba_start": 84005,
+      "lba_sectors": 568,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/BASE/WDEMOB.BIN;1",
+      "clean_path": "/DATA/BASE/WDEMOB.BIN",
+      "size_bytes": 862872,
+      "lba_start": 84573,
+      "lba_sectors": 422,
+      "category": "container_or_data"
+    },
+    {
+      "iso_path": "/DATA/ART_BASE/ARTBASEU.GRC;1",
+      "clean_path": "/DATA/ART_BASE/ARTBASEU.GRC",
+      "size_bytes": 33401,
+      "lba_start": 84995,
+      "lba_sectors": 17,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART_BASE/ART_BASE.GRC;1",
+      "clean_path": "/DATA/ART_BASE/ART_BASE.GRC",
+      "size_bytes": 33401,
+      "lba_start": 85012,
+      "lba_sectors": 17,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART_BASE/ART_BG.GRC;1",
+      "clean_path": "/DATA/ART_BASE/ART_BG.GRC",
+      "size_bytes": 202218,
+      "lba_start": 85029,
+      "lba_sectors": 99,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART_BASE/ART_BGU.GRC;1",
+      "clean_path": "/DATA/ART_BASE/ART_BGU.GRC",
+      "size_bytes": 202227,
+      "lba_start": 85128,
+      "lba_sectors": 99,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART_BASE/ART_S00.GRC;1",
+      "clean_path": "/DATA/ART_BASE/ART_S00.GRC",
+      "size_bytes": 284796,
+      "lba_start": 85227,
+      "lba_sectors": 140,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/ART_BASE/ART_S01.GRC;1",
+      "clean_path": "/DATA/ART_BASE/ART_S01.GRC",
+      "size_bytes": 306610,
+      "lba_start": 85367,
+      "lba_sectors": 150,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/ART_BASE/ART_S02.GRC;1",
+      "clean_path": "/DATA/ART_BASE/ART_S02.GRC",
+      "size_bytes": 281558,
+      "lba_start": 85517,
+      "lba_sectors": 138,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/ART_BASE/ART_S03.GRC;1",
+      "clean_path": "/DATA/ART_BASE/ART_S03.GRC",
+      "size_bytes": 112856,
+      "lba_start": 85655,
+      "lba_sectors": 56,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/ART_BASE/ART_S04.GRC;1",
+      "clean_path": "/DATA/ART_BASE/ART_S04.GRC",
+      "size_bytes": 68888,
+      "lba_start": 85711,
+      "lba_sectors": 34,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/ART_BASE/ART_S05.GRC;1",
+      "clean_path": "/DATA/ART_BASE/ART_S05.GRC",
+      "size_bytes": 69420,
+      "lba_start": 85745,
+      "lba_sectors": 34,
+      "category": "rom_or_data"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I20.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I20.GRC",
+      "size_bytes": 596509,
+      "lba_start": 85779,
+      "lba_sectors": 292,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I21.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I21.GRC",
+      "size_bytes": 777777,
+      "lba_start": 86071,
+      "lba_sectors": 380,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I22.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I22.GRC",
+      "size_bytes": 568584,
+      "lba_start": 86451,
+      "lba_sectors": 278,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I23.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I23.GRC",
+      "size_bytes": 658462,
+      "lba_start": 86729,
+      "lba_sectors": 322,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I24.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I24.GRC",
+      "size_bytes": 935129,
+      "lba_start": 87051,
+      "lba_sectors": 457,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I25.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I25.GRC",
+      "size_bytes": 882058,
+      "lba_start": 87508,
+      "lba_sectors": 431,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I26.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I26.GRC",
+      "size_bytes": 1386899,
+      "lba_start": 87939,
+      "lba_sectors": 678,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I27.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I27.GRC",
+      "size_bytes": 933110,
+      "lba_start": 88617,
+      "lba_sectors": 456,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I28.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I28.GRC",
+      "size_bytes": 760859,
+      "lba_start": 89073,
+      "lba_sectors": 372,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I29.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I29.GRC",
+      "size_bytes": 997632,
+      "lba_start": 89445,
+      "lba_sectors": 488,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I2A.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I2A.GRC",
+      "size_bytes": 835159,
+      "lba_start": 89933,
+      "lba_sectors": 408,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I2B.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I2B.GRC",
+      "size_bytes": 530569,
+      "lba_start": 90341,
+      "lba_sectors": 260,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I2C.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I2C.GRC",
+      "size_bytes": 855424,
+      "lba_start": 90601,
+      "lba_sectors": 418,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I2D.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I2D.GRC",
+      "size_bytes": 1205839,
+      "lba_start": 91019,
+      "lba_sectors": 589,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I2E.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I2E.GRC",
+      "size_bytes": 1026636,
+      "lba_start": 91608,
+      "lba_sectors": 502,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I2F.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I2F.GRC",
+      "size_bytes": 1408479,
+      "lba_start": 92110,
+      "lba_sectors": 688,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART3/ART_I30.GRC;1",
+      "clean_path": "/DATA/ART3/ART_I30.GRC",
+      "size_bytes": 1206552,
+      "lba_start": 92798,
+      "lba_sectors": 590,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART2/ART_I10.GRC;1",
+      "clean_path": "/DATA/ART2/ART_I10.GRC",
+      "size_bytes": 844019,
+      "lba_start": 93388,
+      "lba_sectors": 413,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART2/ART_I11.GRC;1",
+      "clean_path": "/DATA/ART2/ART_I11.GRC",
+      "size_bytes": 1250354,
+      "lba_start": 93801,
+      "lba_sectors": 611,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART2/ART_I12.GRC;1",
+      "clean_path": "/DATA/ART2/ART_I12.GRC",
+      "size_bytes": 883798,
+      "lba_start": 94412,
+      "lba_sectors": 432,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART2/ART_I13.GRC;1",
+      "clean_path": "/DATA/ART2/ART_I13.GRC",
+      "size_bytes": 640415,
+      "lba_start": 94844,
+      "lba_sectors": 313,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART2/ART_I14.GRC;1",
+      "clean_path": "/DATA/ART2/ART_I14.GRC",
+      "size_bytes": 769287,
+      "lba_start": 95157,
+      "lba_sectors": 376,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART2/ART_I15.GRC;1",
+      "clean_path": "/DATA/ART2/ART_I15.GRC",
+      "size_bytes": 977064,
+      "lba_start": 95533,
+      "lba_sectors": 478,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART2/ART_I16.GRC;1",
+      "clean_path": "/DATA/ART2/ART_I16.GRC",
+      "size_bytes": 475366,
+      "lba_start": 96011,
+      "lba_sectors": 233,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART2/ART_I17.GRC;1",
+      "clean_path": "/DATA/ART2/ART_I17.GRC",
+      "size_bytes": 620120,
+      "lba_start": 96244,
+      "lba_sectors": 303,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART2/ART_I18.GRC;1",
+      "clean_path": "/DATA/ART2/ART_I18.GRC",
+      "size_bytes": 748276,
+      "lba_start": 96547,
+      "lba_sectors": 366,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART2/ART_I19.GRC;1",
+      "clean_path": "/DATA/ART2/ART_I19.GRC",
+      "size_bytes": 567039,
+      "lba_start": 96913,
+      "lba_sectors": 277,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART2/ART_I1A.GRC;1",
+      "clean_path": "/DATA/ART2/ART_I1A.GRC",
+      "size_bytes": 702400,
+      "lba_start": 97190,
+      "lba_sectors": 343,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART2/ART_I1B.GRC;1",
+      "clean_path": "/DATA/ART2/ART_I1B.GRC",
+      "size_bytes": 1078115,
+      "lba_start": 97533,
+      "lba_sectors": 527,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART2/ART_I1C.GRC;1",
+      "clean_path": "/DATA/ART2/ART_I1C.GRC",
+      "size_bytes": 957234,
+      "lba_start": 98060,
+      "lba_sectors": 468,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART2/ART_I1D.GRC;1",
+      "clean_path": "/DATA/ART2/ART_I1D.GRC",
+      "size_bytes": 732346,
+      "lba_start": 98528,
+      "lba_sectors": 358,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART2/ART_I1E.GRC;1",
+      "clean_path": "/DATA/ART2/ART_I1E.GRC",
+      "size_bytes": 693538,
+      "lba_start": 98886,
+      "lba_sectors": 339,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART2/ART_I1F.GRC;1",
+      "clean_path": "/DATA/ART2/ART_I1F.GRC",
+      "size_bytes": 768250,
+      "lba_start": 99225,
+      "lba_sectors": 376,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART/ART_I00.GRC;1",
+      "clean_path": "/DATA/ART/ART_I00.GRC",
+      "size_bytes": 1071700,
+      "lba_start": 99601,
+      "lba_sectors": 524,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART/ART_I01.GRC;1",
+      "clean_path": "/DATA/ART/ART_I01.GRC",
+      "size_bytes": 806568,
+      "lba_start": 100125,
+      "lba_sectors": 394,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART/ART_I02.GRC;1",
+      "clean_path": "/DATA/ART/ART_I02.GRC",
+      "size_bytes": 890081,
+      "lba_start": 100519,
+      "lba_sectors": 435,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART/ART_I03.GRC;1",
+      "clean_path": "/DATA/ART/ART_I03.GRC",
+      "size_bytes": 1065514,
+      "lba_start": 100954,
+      "lba_sectors": 521,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART/ART_I04.GRC;1",
+      "clean_path": "/DATA/ART/ART_I04.GRC",
+      "size_bytes": 1277166,
+      "lba_start": 101475,
+      "lba_sectors": 624,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART/ART_I05.GRC;1",
+      "clean_path": "/DATA/ART/ART_I05.GRC",
+      "size_bytes": 902643,
+      "lba_start": 102099,
+      "lba_sectors": 441,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART/ART_I06.GRC;1",
+      "clean_path": "/DATA/ART/ART_I06.GRC",
+      "size_bytes": 907885,
+      "lba_start": 102540,
+      "lba_sectors": 444,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART/ART_I07.GRC;1",
+      "clean_path": "/DATA/ART/ART_I07.GRC",
+      "size_bytes": 1093954,
+      "lba_start": 102984,
+      "lba_sectors": 535,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART/ART_I08.GRC;1",
+      "clean_path": "/DATA/ART/ART_I08.GRC",
+      "size_bytes": 579667,
+      "lba_start": 103519,
+      "lba_sectors": 284,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART/ART_I09.GRC;1",
+      "clean_path": "/DATA/ART/ART_I09.GRC",
+      "size_bytes": 721838,
+      "lba_start": 103803,
+      "lba_sectors": 353,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART/ART_I0A.GRC;1",
+      "clean_path": "/DATA/ART/ART_I0A.GRC",
+      "size_bytes": 835888,
+      "lba_start": 104156,
+      "lba_sectors": 409,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART/ART_I0B.GRC;1",
+      "clean_path": "/DATA/ART/ART_I0B.GRC",
+      "size_bytes": 1094975,
+      "lba_start": 104565,
+      "lba_sectors": 535,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART/ART_I0C.GRC;1",
+      "clean_path": "/DATA/ART/ART_I0C.GRC",
+      "size_bytes": 652892,
+      "lba_start": 105100,
+      "lba_sectors": 319,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART/ART_I0D.GRC;1",
+      "clean_path": "/DATA/ART/ART_I0D.GRC",
+      "size_bytes": 732185,
+      "lba_start": 105419,
+      "lba_sectors": 358,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART/ART_I0E.GRC;1",
+      "clean_path": "/DATA/ART/ART_I0E.GRC",
+      "size_bytes": 653733,
+      "lba_start": 105777,
+      "lba_sectors": 320,
+      "category": "other"
+    },
+    {
+      "iso_path": "/DATA/ART/ART_I0F.GRC;1",
+      "clean_path": "/DATA/ART/ART_I0F.GRC",
+      "size_bytes": 877025,
+      "lba_start": 106097,
+      "lba_sectors": 429,
+      "category": "other"
+    },
+    {
+      "iso_path": "/ADX/0FLISTHT.DIR;1",
+      "clean_path": "/ADX/0FLISTHT.DIR",
+      "size_bytes": 10,
+      "lba_start": 106526,
+      "lba_sectors": 1,
+      "category": "other"
+    },
+    {
+      "iso_path": "/ADX/BGM.AFS;1",
+      "clean_path": "/ADX/BGM.AFS",
+      "size_bytes": 170283008,
+      "lba_start": 106527,
+      "lba_sectors": 83146,
+      "category": "container"
+    }
+  ],
+  "extracted_dir": "G:\\KOF\\extracted",
+  "extracted_count": 392
+}
