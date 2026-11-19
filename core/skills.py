@@ -5,28 +5,38 @@ from __future__ import annotations
 from typing import Any
 
 from skills.base import BaseSkill, SkillResult
-from skills import (
-    ALL_SKILLS,
-    BuildPatchSkill,
-    CreateProjectSkill,
-    ImportSpritesSkill,
-    InspectIsoSkill,
-    ValidateCharacterSkill,
-    skill_build_patch,
-    skill_create_project,
-    skill_import_sprites,
-    skill_inspect_iso,
-    skill_validate_character,
-)
+
+
+def _load_default_skills() -> list[BaseSkill]:
+    """Load and instantiate default skills on-demand to avoid circular imports."""
+    from skills.inspect_iso import InspectIsoSkill
+    from skills.create_project import CreateProjectSkill
+    from skills.import_sprites import ImportSpritesSkill
+    from skills.validate_character import ValidateCharacterSkill
+    from skills.build_patch import BuildPatchSkill
+
+    return [
+        InspectIsoSkill(),
+        CreateProjectSkill(),
+        ImportSpritesSkill(),
+        ValidateCharacterSkill(),
+        BuildPatchSkill(),
+    ]
 
 
 class SkillRegistry:
     """Central registry and executor for deterministic skills."""
 
-    def __init__(self) -> None:
+    def __init__(self, load_defaults: bool = True) -> None:
         self._skills: dict[str, BaseSkill] = {}
-        for s in ALL_SKILLS:
-            self.register(s)
+        self._defaults_loaded: bool = False
+        self._should_load_defaults: bool = load_defaults
+
+    def _ensure_loaded(self) -> None:
+        if self._should_load_defaults and not self._defaults_loaded:
+            self._defaults_loaded = True
+            for s in _load_default_skills():
+                self.register(s)
 
     def register(self, skill: BaseSkill) -> None:
         """Register a skill instance."""
@@ -34,10 +44,12 @@ class SkillRegistry:
 
     def get(self, name: str) -> BaseSkill | None:
         """Retrieve a skill by name."""
+        self._ensure_loaded()
         return self._skills.get(name)
 
     def list_skills(self) -> list[dict[str, Any]]:
         """Return list of all registered skill metadata and tool declarations."""
+        self._ensure_loaded()
         return [
             {
                 "name": s.name,
@@ -50,10 +62,12 @@ class SkillRegistry:
 
     def get_tool_declarations(self) -> list[dict[str, Any]]:
         """Return tool declarations for structured tool-calling engines (LLM / Forge AI)."""
+        self._ensure_loaded()
         return [s.get_tool_declaration() for s in self._skills.values()]
 
     def execute(self, skill_name: str, **kwargs: Any) -> SkillResult:
         """Execute a skill by name with arguments."""
+        self._ensure_loaded()
         skill = self.get(skill_name)
         if not skill:
             return SkillResult(

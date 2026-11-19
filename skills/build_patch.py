@@ -21,7 +21,6 @@ from typing import Any
 import numpy as np
 from PIL import Image
 
-from core.forge_project import ForgeProject
 from skills.base import BaseSkill, SkillResult
 from skills.validate_character import ValidateCharacterSkill
 
@@ -99,6 +98,8 @@ class BuildPatchSkill(BaseSkill):
             )
 
         try:
+            from core.forge_project import ForgeProject
+
             proj = ForgeProject.load(project_name, workspace_dir=ws_path)
         except Exception as exc:
             return SkillResult(
