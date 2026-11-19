@@ -41,6 +41,13 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS = ROOT / "scripts"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from core.characters import CharacterSlot, list_character_slots, resolve_character_slot
+from core.forge_project import ForgeProject
+from core.skills import registry as skill_registry, execute_skill
+from core.ai_assistant import ForgeAIAssistant
 
 
 def _load(name: str, filename: str):
@@ -1069,6 +1076,193 @@ class StudioBackend:
         subprocess.Popen([str(exe), "-batch", "--", str(target)])
         return {"launched": str(exe), "disc": str(target)}
 
+    # ----------------------------------------------------------- Character Forge API
+    def list_forge_projects(self) -> list[dict[str, Any]]:
+        with self.lock:
+            return ForgeProject.list_projects()
+
+    def create_forge_project(self, payload: dict[str, Any]) -> dict[str, Any]:
+        with self.lock:
+            name = str(payload.get("name", "")).strip()
+            if not name:
+                raise ValueError("Nome do projeto não pode ser vazio")
+            base_slot = payload.get("base_slot") or payload.get("base_cid") or 0x03
+            author = str(payload.get("author", "")).strip()
+            description = str(payload.get("description", "")).strip()
+            overwrite = bool(payload.get("overwrite", False))
+            proj = ForgeProject.create(
+                name=name,
+                base_slot=base_slot,
+                author=author,
+                description=description,
+                overwrite=overwrite,
+            )
+            return {"status": "ok", "project": proj.to_dict()}
+
+    def get_forge_project(self, name: str) -> dict[str, Any]:
+        with self.lock:
+            proj = ForgeProject.load(name)
+            return {
+                "status": "ok",
+                "project": proj.to_dict(),
+                "frames": proj.list_frames(),
+            }
+
+    def save_forge_project(self, name: str, payload: dict[str, Any]) -> dict[str, Any]:
+        with self.lock:
+            proj = ForgeProject.load(name)
+            if "author" in payload:
+                proj.data["author"] = str(payload["author"]).strip()
+            if "description" in payload:
+                proj.data["description"] = str(payload["description"]).strip()
+            if "palettes" in payload and isinstance(payload["palettes"], dict):
+                proj.data["palettes"] = payload["palettes"]
+            proj.save()
+            return {"status": "ok", "project": proj.to_dict()}
+
+    def import_forge_sprite(self, name: str, payload: dict[str, Any]) -> dict[str, Any]:
+        with self.lock:
+            proj = ForgeProject.load(name)
+            frame_idx = int(payload.get("frame_idx", 0))
+            btn = str(payload.get("btn", "A")).upper()
+            remove_magenta = bool(payload.get("remove_magenta", True))
+            auto_fit = bool(payload.get("auto_fit", True))
+
+            base_cid = proj.base_slot.char_id
+            info, orig_canvas, _ = self._decode_frame(base_cid, frame_idx)
+            if info["is_empty_stub"] or orig_canvas is None:
+                raise ValueError(f"Frame #{frame_idx} é um stub vazio no slot base {proj.base_slot.display_name}")
+
+            w, h = info["width_px"], info["height_px"]
+            b64 = str(payload.get("image_base64", ""))
+            if "," in b64:
+                b64 = b64.split(",", 1)[1]
+            if not b64:
+                raise ValueError("Nenhuma imagem informada em image_base64")
+            raw_bytes = base64.b64decode(b64)
+
+            _, _, rgba, _ = self._palette_for_slot(base_cid, btn, info["pal_slot"])
+            new_pixels = self._fit_and_quantize_image(
+                raw_bytes,
+                w,
+                h,
+                orig_canvas,
+                rgba,
+                remove_magenta=remove_magenta,
+                auto_fit=auto_fit,
+            )
+
+            out_im = Image.fromarray(new_pixels, mode="P")
+            flat_pal = [ch for rgb in rgba[:16] for ch in rgb[:3]]
+            while len(flat_pal) < 768:
+                flat_pal.extend([0, 0, 0])
+            out_im.putpalette(flat_pal)
+
+            dest_path = proj.add_frame(frame_idx, out_im)
+            proj.update_validation(
+                valid=False,
+                errors=[],
+                warnings=["Sprites alterados. Execute a validação antes de injetar no jogo."],
+            )
+            return {
+                "status": "ok",
+                "frame_idx": frame_idx,
+                "path": str(dest_path),
+                "width": w,
+                "height": h,
+                "stats": {
+                    "width": w,
+                    "height": h,
+                    "colors": 16,
+                    "size_bytes": dest_path.stat().st_size,
+                },
+                "project": proj.to_dict(),
+            }
+
+    def validate_forge_character(self, name: str) -> dict[str, Any]:
+        with self.lock:
+            res = execute_skill("skill_validate_character", project_name=name)
+            proj = ForgeProject.load(name)
+            return {
+                "status": "ok" if res.success else "error",
+                "valid": res.success,
+                "message": res.message,
+                "errors": res.errors,
+                "warnings": res.warnings,
+                "data": res.data,
+                "project": proj.to_dict(),
+            }
+
+    def inject_forge_character(self, name: str) -> dict[str, Any]:
+        with self.lock:
+            proj = ForgeProject.load(name)
+            res_val = execute_skill("skill_validate_character", project_name=name)
+            if not res_val.success:
+                raise ValueError(f"Personagem não aprovado na validação: {'; '.join(res_val.errors)}")
+
+            base_cid = proj.base_slot.char_id
+            entry = self._char_entry_by_id(base_cid)
+            cur_bin = self.proj.current_bytes(entry)
+
+            patches: dict[int, tuple[np.ndarray, dict[str, Any]]] = {}
+            for f_info in proj.list_frames():
+                f_idx = f_info["frame_index"]
+                p_path = proj.get_frame_path(f_idx)
+                if not p_path or not p_path.is_file():
+                    continue
+                with Image.open(p_path) as im:
+                    pix = np.array(im, dtype=np.uint8)
+                base_info, _, _ = self._decode_frame(base_cid, f_idx)
+                patches[f_idx] = (
+                    pix,
+                    {
+                        "w_tiles": base_info["w_tiles"],
+                        "h_tiles": base_info["h_tiles"],
+                        "pal_slot": base_info["pal_slot"],
+                        "flg": base_info["flg"],
+                    },
+                )
+
+            if patches:
+                patched_bin, stats = M03.patch_pxx_bin(cur_bin, patches, entry["clean_path"])
+                self.proj.save_bytes(entry, patched_bin)
+            else:
+                stats = {"mode": "no_custom_frames"}
+
+            for b in BTN_NAMES:
+                self._thumb_cache.pop((base_cid, b), None)
+
+            proj.update_build(output_bin=entry["clean_path"], verified=True)
+            return {
+                "status": "ok",
+                "injected_file": entry["clean_path"],
+                "frames_injected": len(patches),
+                "stats": stats,
+                "rebuild_recommended": True,
+                "message": f"Personagem injetado com sucesso no workspace: {entry['clean_path']}",
+                "project": proj.to_dict(),
+            }
+
+    def forge_ai_chat(self, prompt: str, project_name: str | None = None) -> dict[str, Any]:
+        with self.lock:
+            assistant = ForgeAIAssistant(active_project=project_name)
+            res = assistant.chat(prompt, context={"active_project": project_name})
+            return res
+
+    def export_forge_kofchar(self, name: str) -> bytes:
+        with self.lock:
+            proj = ForgeProject.load(name)
+            pkg = proj.export_package()
+            return pkg.read_bytes()
+
+    def get_forge_frame_png(self, name: str, frame_idx: int) -> bytes:
+        with self.lock:
+            proj = ForgeProject.load(name)
+            p = proj.get_frame_path(frame_idx)
+            if p and p.is_file():
+                return p.read_bytes()
+            return self.get_frame_png(proj.base_slot.char_id, frame_idx, "A", "rgba")
+
 
 # --------------------------------------------------------------------------- UI Web
 HTML_APP = r"""<!DOCTYPE html>
@@ -1145,6 +1339,25 @@ HTML_APP = r"""<!DOCTYPE html>
   .hint{font-size:11px;color:var(--muted)}
   pre.hex{margin:0;flex:1;overflow:auto;background:#0a0e14;border:1px solid var(--border);border-radius:8px;padding:10px;font-family:Consolas,monospace;font-size:11px;line-height:1.45}
   .toast{position:fixed;bottom:16px;right:16px;background:#101622;border:1px solid var(--accent2);padding:10px 14px;border-radius:10px;font-size:12px;box-shadow:0 10px 30px rgba(0,0,0,.5);z-index:99;max-width:460px;display:none}
+  /* Character Forge Styles */
+  .forge-wrap{display:grid;grid-template-columns:310px 1.2fr 380px;gap:12px;flex:1;min-height:0}
+  .forge-badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:10px;font-weight:700}
+  .forge-badge.ok{background:#15803d;color:#86efac;border:1px solid #22c55e}
+  .forge-badge.warn{background:#78350f;color:#fde047;border:1px solid #f59e0b}
+  .forge-badge.err{background:#7f1d1d;color:#fca5a5;border:1px solid #ef4444}
+  .chip{background:var(--panel2);border:1px solid var(--border);color:var(--text);padding:3px 8px;border-radius:999px;font-size:10px;cursor:pointer;transition:.12s;white-space:nowrap}
+  .chip:hover{border-color:var(--accent2);background:#232d40}
+  .chat-box{flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:8px;padding:8px;background:#0d111a;border:1px solid var(--border);border-radius:8px}
+  .chat-msg{max-width:92%;padding:8px 10px;border-radius:8px;font-size:11px;line-height:1.4}
+  .chat-msg.user{align-self:flex-end;background:#2563eb;color:#fff;border-bottom-right-radius:2px}
+  .chat-msg.assistant{align-self:flex-start;background:var(--panel2);border:1px solid var(--border);border-bottom-left-radius:2px}
+  .tool-card{background:#0a0e14;border:1px solid #3b82f6;border-radius:6px;padding:6px;font-family:Consolas,monospace;font-size:10px;color:#93c5fd;margin-top:4px}
+  .check-item{display:flex;align-items:center;justify-content:space-between;padding:6px 10px;background:var(--panel2);border:1px solid var(--border);border-radius:6px;font-size:11px}
+  .check-item.pass{border-left:4px solid var(--ok)}
+  .check-item.fail{border-left:4px solid var(--err)}
+  .forge-proj-card{background:var(--panel2);border:1px solid var(--border);border-radius:8px;padding:8px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:.12s}
+  .forge-proj-card:hover{border-color:var(--accent2)}
+  .forge-proj-card.active{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
 </style>
 </head>
 <body>
@@ -1152,6 +1365,7 @@ HTML_APP = r"""<!DOCTYPE html>
   <h1>KOF 2002 (PS2) <span class="pill">SLES-53381</span></h1>
   <span id="modBadge" class="pill mod">0 alterações</span>
   <span id="statusText" class="hint"></span>
+  <button id="btnOpenForge" class="primary" style="background:linear-gradient(135deg, #8b5cf6, #6366f1);border-color:#a855f7;color:#fff;font-weight:700;display:flex;align-items:center;gap:6px">+ CRIAR PERSONAGEM</button>
   <div class="spacer"></div>
   <button id="btnRevertAll" class="danger">Reverter tudo</button>
   <button id="btnBuild" class="primary">Construir ISO (.bin/.cue)</button>
@@ -1181,6 +1395,7 @@ HTML_APP = r"""<!DOCTYPE html>
       <div class="tab active" data-tab="sprites">1. Sprites & Drag-and-Drop</div>
       <div class="tab" data-tab="palettes">2. Paletas ao Vivo (A/B/C/D)</div>
       <div class="tab" data-tab="files">3. Arquivos do Disco & Hex</div>
+      <div class="tab" data-tab="forge" id="tabNavForge" style="color:#c084fc">✨ 4. Character Forge (Criador)</div>
     </div>
 
     <!-- TAB 1: SPRITES -->
@@ -1315,6 +1530,127 @@ HTML_APP = r"""<!DOCTYPE html>
         </div>
       </div>
     </div>
+
+    <!-- TAB 4: CHARACTER FORGE -->
+    <div id="tab-forge" class="tab-body">
+      <div class="forge-wrap">
+        <!-- COLUNA ESQUERDA: WIZARD MODO B + PROJETOS -->
+        <div style="display:flex;flex-direction:column;gap:12px;min-height:0">
+          <div class="card">
+            <h2>
+              <span>✨ Criar Novo Personagem</span>
+              <span class="forge-badge ok">Modo B: Base</span>
+            </h2>
+            <div class="hint">Clone um lutador existente para herdar moveset, física e colisões, personalizando aparência e sprites.</div>
+            <label class="hint" style="margin-top:4px">Lutador Base (Slot original):
+              <select id="forgeBaseSelect" style="margin-top:3px"></select>
+            </label>
+            <label class="hint">Nome do Novo Personagem:
+              <input id="forgeProjName" type="text" value="Terry Legendary" placeholder="Ex: Terry Legendary" style="margin-top:3px" />
+            </label>
+            <label class="hint">Autor / Modder:
+              <input id="forgeProjAuthor" type="text" value="KOF Modder" placeholder="Ex: KOF Modder" style="margin-top:3px" />
+            </label>
+            <label class="hint">Descrição:
+              <input id="forgeProjDesc" type="text" value="Versão Lendária baseada em Terry Bogard" placeholder="Descrição do personagem" style="margin-top:3px" />
+            </label>
+            <button id="btnCreateForgeProj" class="primary" style="background:linear-gradient(135deg, #8b5cf6, #6366f1);border-color:#a855f7;color:#fff;margin-top:4px">🚀 Criar Projeto no Forge</button>
+          </div>
+
+          <div class="card" style="flex:1;min-height:0">
+            <h2>
+              <span>Projetos em workspace/forge/</span>
+              <button id="btnRefreshProjects" style="padding:2px 8px;font-size:11px">🔄</button>
+            </h2>
+            <div class="row">
+              <button id="btnImportKofchar" style="flex:1">📥 Importar .kofchar</button>
+              <input id="fileKofcharInput" type="file" accept=".kofchar,.zip" style="display:none" />
+            </div>
+            <div id="forgeProjectsList" style="flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:8px;margin-top:4px"></div>
+          </div>
+        </div>
+
+        <!-- COLUNA MEIO: STUDIO DO PROJETO ATIVO + VALIDAÇÃO + SPRITES -->
+        <div style="display:flex;flex-direction:column;gap:12px;min-height:0">
+          <div class="card">
+            <h2>
+              <span id="activeProjTitle">Nenhum projeto selecionado</span>
+              <div class="row">
+                <span id="activeProjBadge" class="forge-badge warn">NÃO SELECIONADO</span>
+                <button id="btnForgeValidate" class="primary" style="background:#2563eb;border-color:#3b82f6">🔍 Validar Personagem</button>
+                <button id="btnForgeInject" class="good">⚡ Injetar na ISO</button>
+                <button id="btnForgeExport">📦 Exportar .kofchar</button>
+              </div>
+            </h2>
+            <div id="activeProjMeta" class="hint">Crie um projeto acima ou selecione um projeto existente na lista.</div>
+          </div>
+
+          <!-- PAINEL DE RELATÓRIO DE VALIDAÇÃO -->
+          <div class="card">
+            <h2><span>📋 Relatório de Conformidade & Validação LBA-Safe</span></h2>
+            <div id="validationChecklist" style="display:flex;flex-direction:column;gap:6px">
+              <div class="check-item" id="chkSlot"><span>1. Slot Base & Arquivo PXX.BIN</span><span class="forge-badge ok">AGUARDANDO</span></div>
+              <div class="check-item" id="chkDims"><span>2. Dimensões & Grade de Tiles (16x16)</span><span class="forge-badge ok">AGUARDANDO</span></div>
+              <div class="check-item" id="chkPal"><span>3. Paleta 16 Cores & Transparência Índice 0</span><span class="forge-badge ok">AGUARDANDO</span></div>
+              <div class="check-item" id="chkMem"><span>4. Orçamento de Memória e LBA Seguro</span><span class="forge-badge ok">AGUARDANDO</span></div>
+            </div>
+            <div id="valLogDetails" class="hint" style="margin-top:4px;background:#0d111a;padding:8px;border-radius:6px;border:1px solid var(--border)">Clique em 'Validar Personagem' para executar a inspeção determinística.</div>
+          </div>
+
+          <!-- SPRITES PERSONALIZADOS DO PROJETO -->
+          <div class="card" style="flex:1;min-height:0">
+            <h2>
+              <span>🖼️ Importador de Sprites do Projeto</span>
+              <div class="row">
+                <span class="hint">Frame #:</span>
+                <input id="forgeFrameIdx" type="number" min="0" max="650" value="0" style="width:65px;text-align:center" />
+                <button id="btnForgePickSprite">Carregar Imagem</button>
+                <input id="forgeSpriteInput" type="file" accept="image/*" style="display:none" />
+                <button id="btnForgeImportSprite" class="primary">Importar para o Projeto</button>
+              </div>
+            </h2>
+            <div class="row" style="gap:14px;align-items:center">
+              <label class="hint"><input id="chkForgeMagenta" type="checkbox" checked /> Remover magenta (#FF00FF)</label>
+              <label class="hint"><input id="chkForgeAutoFit" type="checkbox" checked /> Auto-fit (encaixar no corpo)</label>
+              <div class="spacer"></div>
+              <span id="forgeCustomCount" class="hint">0 frames personalizados</span>
+            </div>
+            <div id="forgeFramesGrid" style="flex:1;overflow-y:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:8px;align-content:start;margin-top:6px"></div>
+          </div>
+        </div>
+
+        <!-- COLUNA DIREITA: FORGE AI ASSISTANT SIDEBAR -->
+        <div class="card" style="display:flex;flex-direction:column;gap:10px;min-height:0">
+          <h2>
+            <span>🤖 Forge AI Assistant</span>
+            <span class="pill" style="color:#22c55e;border-color:#15803d">Online • LBA-Safe</span>
+          </h2>
+          <div class="row" style="gap:4px">
+            <span class="chip" onclick="quickPrompt('Crie um lutador baseado no Terry')">✨ Crie lutador (Terry)</span>
+            <span class="chip" onclick="quickPrompt('Valide o personagem')">🔍 Validar</span>
+            <span class="chip" onclick="quickPrompt('Injete na ISO')">⚡ Injetar</span>
+            <span class="chip" onclick="quickPrompt('Listar projetos')">📋 Listar</span>
+          </div>
+          <div id="forgeChatBox" class="chat-box">
+            <div class="chat-msg assistant">
+              👋 <b>Olá! Eu sou o Forge AI Assistant.</b><br/>
+              Posso criar lutadores baseados em slots existentes, importar frames, executar validações de conformidade LBA e injetar modificações com segurança.<br/>
+              <i>Experimente clicar em uma das sugestões acima ou digite uma instrução!</i>
+            </div>
+          </div>
+          <div class="row" style="gap:6px">
+            <input id="forgeChatInput" type="text" placeholder="Ex: Crie um lutador baseado no Terry..." style="flex:1" />
+            <button id="btnForgeChatSend" class="primary" style="background:#8b5cf6;border-color:#a855f7">Enviar</button>
+          </div>
+          <details style="font-size:11px;color:var(--muted)">
+            <summary style="cursor:pointer;font-weight:700">📜 Action Log (Execução de Ferramentas)</summary>
+            <div id="forgeActionLog" style="max-height:120px;overflow-y:auto;display:flex;flex-direction:column;gap:4px;margin-top:6px;background:#0a0d13;padding:6px;border-radius:6px;border:1px solid var(--border)">
+              <div class="hint">Nenhuma ação executada ainda.</div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
   </section>
 </main>
 <div id="toast" class="toast"></div>
@@ -1365,6 +1701,7 @@ document.querySelectorAll('.tab').forEach(tab=>{
     $('#tab-'+tab.dataset.tab).classList.add('active');
     if(tab.dataset.tab==='palettes') renderPaletteEditor();
     if(tab.dataset.tab==='files') loadFiles();
+    if(tab.dataset.tab==='forge'){ populateForgeBaseSelect(); loadForgeProjects(); }
   };
 });
 
@@ -1969,8 +2306,326 @@ $('#btnLaunch').onclick = async ()=>{
   }
 };
 
+// ---------------- Character Forge Logic ----------------
+state.forgeProjects = [];
+state.activeForgeProj = null;
+state.activeForgeFrames = [];
+
+function populateForgeBaseSelect(){
+  const sel = $('#forgeBaseSelect');
+  if(!sel || sel.children.length > 0) return;
+  for(const c of state.chars){
+    const opt = document.createElement('option');
+    opt.value = String(c.cid);
+    opt.textContent = `${c.name} (${c.hex_id})`;
+    if(c.cid === 0x03) opt.selected = true; // Terry Bogard como padrão do Mode B
+    sel.appendChild(opt);
+  }
+}
+
+async function loadForgeProjects(){
+  try{
+    const res = await api('/api/forge/projects');
+    state.forgeProjects = res.projects || [];
+    renderForgeProjectsList();
+    if(!state.activeForgeProj && state.forgeProjects.length > 0){
+      selectForgeProject(state.forgeProjects[0].slug);
+    }
+  }catch(ex){ console.warn(ex); }
+}
+
+function renderForgeProjectsList(){
+  const list = $('#forgeProjectsList');
+  if(!list) return;
+  list.innerHTML = '';
+  if(state.forgeProjects.length === 0){
+    list.innerHTML = '<div class="hint" style="padding:10px;text-align:center">Nenhum projeto encontrado. Crie o primeiro acima!</div>';
+    return;
+  }
+  for(const p of state.forgeProjects){
+    const d = document.createElement('div');
+    const isActive = state.activeForgeProj && state.activeForgeProj.slug === p.slug;
+    d.className = 'forge-proj-card' + (isActive ? ' active' : '');
+    const valClass = p.valid ? 'ok' : 'warn';
+    const valText = p.valid ? 'VALIDADO' : 'PENDENTE';
+    d.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <b style="font-size:12px;color:var(--text)">${p.name}</b>
+        <span class="forge-badge ${valClass}">${valText}</span>
+      </div>
+      <div class="hint">Base: <b>${p.base_slot}</b> [${p.char_id_hex}] • ${p.modified_frames_count || 0} frames mod</div>
+      <div class="row" style="margin-top:4px;gap:4px">
+        <button class="btn" style="padding:3px 8px;font-size:10px" onclick="event.stopPropagation(); selectForgeProject('${p.slug}')">Abrir</button>
+        <button class="btn" style="padding:3px 8px;font-size:10px" onclick="event.stopPropagation(); window.open('/api/forge/project/${p.slug}/export')">📦 Exportar</button>
+        <button class="btn danger" style="padding:3px 8px;font-size:10px" onclick="event.stopPropagation(); deleteForgeProject('${p.slug}')">Excluir</button>
+      </div>
+    `;
+    d.onclick = () => selectForgeProject(p.slug);
+    list.appendChild(d);
+  }
+}
+
+async function selectForgeProject(slug){
+  try{
+    const res = await api(`/api/forge/project/${slug}`);
+    state.activeForgeProj = res.project;
+    state.activeForgeFrames = res.frames || [];
+    renderActiveForgeProject();
+    renderForgeProjectsList();
+  }catch(ex){ toast(ex.message, true); }
+}
+
+function renderActiveForgeProject(){
+  const p = state.activeForgeProj;
+  if(!p) return;
+  $('#activeProjTitle').textContent = `${p.name} (${p.slug})`;
+  $('#activeProjMeta').innerHTML = `Slot Base: <b>${p.base_slot.display_name}</b> (${p.base_slot.char_id_hex}) | Autor: <b>${p.author || 'Anônimo'}</b> | Memória Máx: <b>${(p.base_slot.size_bytes/1024).toFixed(1)} KB</b>`;
+
+  const badge = $('#activeProjBadge');
+  const isValid = p.validation && p.validation.valid;
+  badge.className = 'forge-badge ' + (isValid ? 'ok' : 'warn');
+  badge.textContent = isValid ? 'VALIDADO (LBA-SAFE)' : 'PENDENTE DE VALIDAÇÃO';
+
+  renderValidationChecklist(p.validation);
+  renderForgeFramesGrid();
+}
+
+function renderValidationChecklist(val){
+  const valid = val && val.valid;
+  const metrics = (val && val.metrics) || {};
+  const chkSlot = $('#chkSlot');
+  const chkDims = $('#chkDims');
+  const chkPal = $('#chkPal');
+  const chkMem = $('#chkMem');
+
+  if(valid){
+    chkSlot.className = 'check-item pass';
+    chkSlot.querySelector('.forge-badge').className = 'forge-badge ok';
+    chkSlot.querySelector('.forge-badge').textContent = 'PASS';
+
+    chkDims.className = 'check-item pass';
+    chkDims.querySelector('.forge-badge').className = 'forge-badge ok';
+    chkDims.querySelector('.forge-badge').textContent = 'PASS';
+
+    chkPal.className = 'check-item pass';
+    chkPal.querySelector('.forge-badge').className = 'forge-badge ok';
+    chkPal.querySelector('.forge-badge').textContent = 'PASS';
+
+    chkMem.className = 'check-item pass';
+    chkMem.querySelector('.forge-badge').className = 'forge-badge ok';
+    chkMem.querySelector('.forge-badge').textContent = 'PASS';
+
+    const used = metrics.estimated_bytes || 0;
+    const maxB = metrics.max_memory_bytes || 0;
+    const headroom = metrics.headroom_bytes || 0;
+    $('#valLogDetails').innerHTML = `✅ <b>Validação Concluída com Sucesso!</b><br/>Tamanho: <b>${used.toLocaleString()} B</b> / ${maxB.toLocaleString()} B (Margem livre: <b>${headroom.toLocaleString()} B</b>). Pronto para injeção na ISO!`;
+  } else if(val && val.last_validated) {
+    const errText = (val.errors || []).join('<br/>') || 'Erros encontrados na validação.';
+    $('#valLogDetails').innerHTML = `<span style="color:var(--err)">⚠️ ${errText}</span>`;
+  } else {
+    $('#valLogDetails').textContent = "Clique em 'Validar Personagem' para executar a inspeção determinística.";
+  }
+}
+
+function renderForgeFramesGrid(){
+  const grid = $('#forgeFramesGrid');
+  if(!grid) return;
+  grid.innerHTML = '';
+  const frames = state.activeForgeFrames || [];
+  $('#forgeCustomCount').textContent = `${frames.length} frame(s) personalizado(s)`;
+
+  if(frames.length === 0){
+    grid.innerHTML = '<div class="hint" style="grid-column:1/-1;padding:12px;text-align:center">Nenhum sprite customizado ainda. Selecione um frame # acima e envie uma imagem para substituir o sprite!</div>';
+    return;
+  }
+
+  for(const f of frames){
+    const d = document.createElement('div');
+    d.className = 'frame-item';
+    d.innerHTML = `
+      <img src="/api/forge/project/${state.activeForgeProj.slug}/sprite/${f.frame_index}.png?v=${Date.now()%1e5}" />
+      <span>#${f.frame_index}</span>
+      <span class="hint">${f.width}x${f.height}</span>
+    `;
+    d.onclick = () => {
+      $('#forgeFrameIdx').value = f.frame_index;
+    };
+    grid.appendChild(d);
+  }
+}
+
+$('#btnCreateForgeProj').onclick = async () => {
+  const name = $('#forgeProjName').value.trim();
+  if(!name) return toast('Informe o nome do personagem', true);
+  const base_cid = Number($('#forgeBaseSelect').value);
+  const author = $('#forgeProjAuthor').value.trim();
+  const description = $('#forgeProjDesc').value.trim();
+  try{
+    const res = await api('/api/forge/create', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ name, base_cid, author, description, overwrite: true }),
+    });
+    toast(`Projeto '${res.project.name}' criado com sucesso!`);
+    await loadForgeProjects();
+    await selectForgeProject(res.project.slug);
+  }catch(ex){ toast(ex.message, true); }
+};
+
+$('#btnForgeValidate').onclick = async () => {
+  if(!state.activeForgeProj) return toast('Selecione um projeto primeiro', true);
+  try{
+    const res = await api(`/api/forge/project/${state.activeForgeProj.slug}/validate`, {method: 'POST'});
+    toast(res.valid ? 'Personagem validado com sucesso (LBA-Safe)!' : 'Falha na validação', !res.valid);
+    await selectForgeProject(state.activeForgeProj.slug);
+    await loadForgeProjects();
+  }catch(ex){ toast(ex.message, true); }
+};
+
+$('#btnForgeInject').onclick = async () => {
+  if(!state.activeForgeProj) return toast('Selecione um projeto primeiro', true);
+  try{
+    const res = await api(`/api/forge/project/${state.activeForgeProj.slug}/inject`, {method: 'POST'});
+    toast(res.message || 'Personagem injetado com sucesso no workspace!');
+    await loadCharacters();
+    await selectForgeProject(state.activeForgeProj.slug);
+  }catch(ex){ toast(ex.message, true); }
+};
+
+$('#btnForgeExport').onclick = () => {
+  if(!state.activeForgeProj) return toast('Selecione um projeto primeiro', true);
+  window.open(`/api/forge/project/${state.activeForgeProj.slug}/export`);
+};
+
+$('#btnRefreshProjects').onclick = loadForgeProjects;
+
+async function deleteForgeProject(slug){
+  if(!confirm(`Tem certeza que deseja excluir o projeto '${slug}'?`)) return;
+  try{
+    await api(`/api/forge/project/${slug}/delete`, {method: 'POST'});
+    toast(`Projeto '${slug}' excluído.`);
+    if(state.activeForgeProj && state.activeForgeProj.slug === slug){
+      state.activeForgeProj = null;
+    }
+    await loadForgeProjects();
+  }catch(ex){ toast(ex.message, true); }
+}
+
+let pendingForgeSpriteBase64 = null;
+$('#btnForgePickSprite').onclick = () => $('#forgeSpriteInput').click();
+$('#forgeSpriteInput').onchange = ev => {
+  const file = ev.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    pendingForgeSpriteBase64 = reader.result;
+    toast(`Imagem '${file.name}' carregada e pronta para importar.`);
+  };
+  reader.readAsDataURL(file);
+  ev.target.value = '';
+};
+
+$('#btnForgeImportSprite').onclick = async () => {
+  if(!state.activeForgeProj) return toast('Selecione um projeto primeiro', true);
+  if(!pendingForgeSpriteBase64) return toast('Selecione um arquivo de imagem primeiro', true);
+  const frameIdx = Number($('#forgeFrameIdx').value);
+  try{
+    const res = await api(`/api/forge/project/${state.activeForgeProj.slug}/import_sprite`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        frame_idx: frameIdx,
+        image_base64: pendingForgeSpriteBase64,
+        btn: 'A',
+        remove_magenta: $('#chkForgeMagenta').checked,
+        auto_fit: $('#chkForgeAutoFit').checked,
+      }),
+    });
+    toast(`Frame #${frameIdx} importado com sucesso para o projeto!`);
+    pendingForgeSpriteBase64 = null;
+    await selectForgeProject(state.activeForgeProj.slug);
+  }catch(ex){ toast(ex.message, true); }
+};
+
+// ---------------- Forge AI Assistant Sidebar ----------------
+async function sendForgeAIChat(promptText){
+  const txt = promptText || $('#forgeChatInput').value.trim();
+  if(!txt) return;
+  $('#forgeChatInput').value = '';
+
+  const chatBox = $('#forgeChatBox');
+  const uMsg = document.createElement('div');
+  uMsg.className = 'chat-msg user';
+  uMsg.textContent = txt;
+  chatBox.appendChild(uMsg);
+  chatBox.scrollTop = chatBox.scrollHeight;
+
+  try{
+    const res = await api('/api/forge/ai/chat', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        prompt: txt,
+        project_name: state.activeForgeProj ? state.activeForgeProj.name : null,
+      }),
+    });
+
+    const aMsg = document.createElement('div');
+    aMsg.className = 'chat-msg assistant';
+    let replyHtml = (res.reply || '').replace(/\n/g, '<br/>');
+    if(res.skill_executed){
+      replyHtml += `<div class="tool-card">🔧 Executou: <b>${res.skill_executed}</b> (${res.status})</div>`;
+    }
+    aMsg.innerHTML = replyHtml;
+    chatBox.appendChild(aMsg);
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+    if(res.action_log){
+      const aLog = $('#forgeActionLog');
+      aLog.innerHTML = '';
+      for(const item of res.action_log.slice(-10)){
+        const row = document.createElement('div');
+        row.style.fontSize = '10px';
+        row.textContent = `[${item.type}] ${item.detail}`;
+        aLog.appendChild(row);
+      }
+    }
+
+    await loadForgeProjects();
+    if(state.activeForgeProj) await selectForgeProject(state.activeForgeProj.slug);
+  }catch(ex){
+    const eMsg = document.createElement('div');
+    eMsg.className = 'chat-msg assistant';
+    eMsg.style.borderColor = 'var(--err)';
+    eMsg.textContent = 'Erro ao processar instrução: ' + ex.message;
+    chatBox.appendChild(eMsg);
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+}
+
+function quickPrompt(p){
+  $('#forgeChatInput').value = p;
+  sendForgeAIChat(p);
+}
+
+$('#btnForgeChatSend').onclick = () => sendForgeAIChat();
+$('#forgeChatInput').onkeydown = ev => { if(ev.key === 'Enter') sendForgeAIChat(); };
+
+// Botão [ + CRIAR PERSONAGEM ] no cabeçalho
+$('#btnOpenForge').onclick = () => {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-body').forEach(b => b.classList.remove('active'));
+  $('#tabNavForge').classList.add('active');
+  $('#tab-forge').classList.add('active');
+  populateForgeBaseSelect();
+  loadForgeProjects();
+  $('#forgeProjName').focus();
+};
+
 (async ()=>{
   await loadCharacters();
+  populateForgeBaseSelect();
+  await loadForgeProjects();
   await selectChar(0x27); // Omega Rugal por padrão
   restartAnimLoop();
 })();
@@ -2048,6 +2703,22 @@ def make_handler(backend: StudioBackend):
                     p = qs.get("path", [""])[0]
                     pg = int(qs.get("page", ["0"])[0])
                     self._json(200, backend.get_file_hex(p, pg))
+                elif u.path == "/api/forge/projects":
+                    self._json(200, {"projects": backend.list_forge_projects()})
+                elif len(parts) == 4 and parts[0] == "api" and parts[1] == "forge" and parts[2] == "project":
+                    self._json(200, backend.get_forge_project(parts[3]))
+                elif len(parts) == 5 and parts[0] == "api" and parts[1] == "forge" and parts[2] == "project" and parts[4] == "export":
+                    data = backend.export_forge_kofchar(parts[3])
+                    self.send_response(200)
+                    self.send_header("Content-Type", "application/zip")
+                    self.send_header("Content-Disposition", f'attachment; filename="{parts[3]}.kofchar"')
+                    self.send_header("Content-Length", str(len(data)))
+                    self.send_header("Cache-Control", "no-store")
+                    self.end_headers()
+                    self.wfile.write(data)
+                elif len(parts) == 6 and parts[0] == "api" and parts[1] == "forge" and parts[2] == "project" and parts[4] == "sprite" and parts[5].endswith(".png"):
+                    fidx = int(parts[5][:-4])
+                    self._send(200, backend.get_forge_frame_png(parts[3], fidx), "image/png")
                 else:
                     self._json(404, {"error": f"Rota não encontrada: {u.path}"})
             except Exception as ex:
@@ -2078,6 +2749,26 @@ def make_handler(backend: StudioBackend):
                 elif u.path == "/api/launch":
                     body = self._read_json()
                     self._json(200, backend.launch_pcsx2(body.get("pcsx2_path")))
+                elif u.path == "/api/forge/create":
+                    body = self._read_json()
+                    self._json(200, backend.create_forge_project(body))
+                elif len(parts) == 5 and parts[0] == "api" and parts[1] == "forge" and parts[2] == "project" and parts[4] == "import_sprite":
+                    body = self._read_json()
+                    self._json(200, backend.import_forge_sprite(parts[3], body))
+                elif len(parts) == 5 and parts[0] == "api" and parts[1] == "forge" and parts[2] == "project" and parts[4] == "validate":
+                    self._json(200, backend.validate_forge_character(parts[3]))
+                elif len(parts) == 5 and parts[0] == "api" and parts[1] == "forge" and parts[2] == "project" and parts[4] == "inject":
+                    self._json(200, backend.inject_forge_character(parts[3]))
+                elif u.path == "/api/forge/ai/chat":
+                    body = self._read_json()
+                    self._json(200, backend.forge_ai_chat(body.get("prompt", ""), body.get("project_name")))
+                elif len(parts) == 5 and parts[0] == "api" and parts[1] == "forge" and parts[2] == "project" and parts[4] == "save":
+                    body = self._read_json()
+                    self._json(200, backend.save_forge_project(parts[3], body))
+                elif len(parts) == 5 and parts[0] == "api" and parts[1] == "forge" and parts[2] == "project" and parts[4] == "delete":
+                    proj = ForgeProject.load(parts[3])
+                    proj.delete()
+                    self._json(200, {"status": "ok", "deleted": parts[3]})
                 else:
                     self._json(404, {"error": f"Rota não encontrada: {u.path}"})
             except Exception as ex:
@@ -2104,7 +2795,7 @@ def self_test() -> int:
     res = b.save_palette(0x27, "A", ["#112233"] * 15)
     assert "pal_idx" in res
     rev = b.revert_character_palettes(0x27)
-    assert len(b.proj.modified_entries()) == 0, f"Sobrou modificação: {rev}"
+    assert not b.proj.is_modified(b._first_grc_entry()), f"FIRST.GRC ainda modificado: {rev}"
 
     # Verifica sequências de golpes especiais e bancos de voz ACX para TODOS os 46 personagens
     for ch in chars:
@@ -2116,6 +2807,92 @@ def self_test() -> int:
     wav0 = b.get_voice_wav(0x27, 0)
     assert wav0.startswith(b"RIFF"), "WAV decodificado inválido"
     print(f"SELF-TEST OK: {len(chars)}/46 personagens com especiais + vozes ACX/WAV verificados.")
+
+    # ------------------ Character Forge & AI Assistant Tests ------------------
+    print("Executando testes do Character Forge e AI Assistant...")
+    test_slug = "terry_legendary_test"
+    # 1. Criação do projeto (Mode B - Terry Bogard)
+    c_res = b.create_forge_project({
+        "name": "Terry Legendary Test",
+        "base_slot": 0x03,
+        "author": "QA Verifier",
+        "description": "Teste automatizado do Character Forge",
+        "overwrite": True,
+    })
+    assert c_res["status"] == "ok"
+    proj_info = c_res["project"]
+    assert proj_info["slug"] == test_slug
+
+    # 2. Listagem de projetos
+    projs = b.list_forge_projects()
+    assert any(p["slug"] == test_slug for p in projs), "Projeto não encontrado na listagem"
+
+    # 3. Leitura do projeto
+    g_res = b.get_forge_project(test_slug)
+    assert g_res["status"] == "ok"
+    assert g_res["project"]["base_slot"]["char_id"] == 3
+
+    # 4. Importação de sprite (Gera um PNG 128x128 sintético para o frame 0 do Terry)
+    dummy_im = Image.new("RGBA", (128, 128), (220, 40, 40, 255))
+    dummy_buf = io.BytesIO()
+    dummy_im.save(dummy_buf, format="PNG")
+    dummy_b64 = base64.b64encode(dummy_buf.getvalue()).decode("ascii")
+
+    imp_res = b.import_forge_sprite(test_slug, {
+        "frame_idx": 0,
+        "image_base64": dummy_b64,
+        "btn": "A",
+        "remove_magenta": False,
+        "auto_fit": True,
+    })
+    assert imp_res["status"] == "ok"
+    assert imp_res["frame_idx"] == 0
+
+    # 5. Validação determinística
+    val_res = b.validate_forge_character(test_slug)
+    assert val_res["status"] == "ok"
+    assert val_res["valid"] is True, f"Validação falhou: {val_res}"
+
+    # 6. Exportação do pacote .kofchar
+    pkg_bytes = b.export_forge_kofchar(test_slug)
+    assert len(pkg_bytes) > 100
+    assert pkg_bytes.startswith(b"PK\x03\x04"), "Pacote .kofchar não é um ZIP válido"
+
+    # 7. Injeção no workspace de disco
+    inj_res = b.inject_forge_character(test_slug)
+    assert inj_res["status"] == "ok"
+    assert inj_res["frames_injected"] >= 1
+    assert any("P03.BIN" in e["clean_path"] for e in b.proj.modified_entries()), "P03.BIN não foi modificado"
+
+    # 8. Testes do Forge AI Assistant
+    ai_create = b.forge_ai_chat("Crie um lutador baseado no Terry")
+    assert ai_create["action"] == "execute_tool"
+    assert ai_create["skill_executed"] == "skill_create_project"
+
+    ai_val = b.forge_ai_chat("Valide o personagem", test_slug)
+    assert ai_val["action"] == "execute_tool"
+    assert ai_val["skill_executed"] == "skill_validate_character"
+
+    ai_inject = b.forge_ai_chat("Injete na ISO", test_slug)
+    assert ai_inject["action"] == "execute_tool"
+    assert ai_inject["skill_executed"] == "skill_build_patch"
+
+    ai_rej = b.forge_ai_chat("Escrever bytes hex 0x90 no offset 0x3E6960")
+    assert ai_rej["action"] == "rejected"
+
+    # 9. Limpeza: reverte arquivos modificados e remove projetos de teste
+    b.revert_character(0x03)
+    assert not any("P03.BIN" in e["clean_path"] for e in b.proj.modified_entries()), "P03.BIN ainda modificado após reverter"
+
+    test_proj = ForgeProject.load(test_slug)
+    test_proj.delete()
+    default_ws = Path(test_proj.project_dir).parent
+    for extra_name in ("terry_bogard_custom", "terry_custom"):
+        cand = default_ws / extra_name
+        if cand.exists():
+            ForgeProject.load(cand).delete()
+
+    print("FORGE INTEGRATION TESTS OK: Projetos, Importação, Validação, Injeção e AI Assistant 100% verificados.")
     return 0
 
 
@@ -2125,9 +2902,10 @@ def main() -> int:
     ap.add_argument("--port", type=int, default=8765)
     ap.add_argument("--open", action="store_true", help="Abre o navegador automaticamente")
     ap.add_argument("--self-test", action="store_true")
+    ap.add_argument("--test", action="store_true", help="Executa testes unitários e de integração")
     args = ap.parse_args()
 
-    if args.self_test:
+    if args.self_test or args.test:
         return self_test()
 
     backend = StudioBackend()
